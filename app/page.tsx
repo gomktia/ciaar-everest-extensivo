@@ -339,7 +339,7 @@ export default function LandingPage() {
                     return (
                       <div
                         key={`${aluno.nome}-${index}`}
-                        className="flex items-center gap-3 bg-gradient-to-br from-[#1e293b] to-[#334155] border border-orange-500/10 hover:border-orange-500/40 rounded-lg px-3 sm:px-4 py-2.5 transition-colors duration-200"
+                        className="flex items-center gap-3 bg-gradient-to-br from-[#0f172a] to-[#1e293b] border border-orange-500/10 hover:border-orange-500/40 rounded-lg px-3 sm:px-4 py-2.5 transition-colors duration-200"
                       >
                         {/* Posição */}
                         <div className="w-10 shrink-0 text-center text-base font-bold text-orange-400">
@@ -1287,15 +1287,15 @@ export default function LandingPage() {
                     <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
                       <Bookmark className="w-6 h-6 text-white" />
                     </div>
-                    <h4 className="font-bold mb-2 text-orange-400">E-book "Dicas de Prova"</h4>
-                    <p className="text-sm text-gray-300">50 dicas exclusivas para maximizar sua pontuação</p>
+                    <h4 className="font-bold mb-2 text-orange-400">INTENSIVO pré-prova CIAAR 2028</h4>
+                    <p className="text-sm text-gray-300">De fevereiro a maio</p>
                   </div>
                   <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-lg p-6 border border-orange-500/20">
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
                       <TrendingUp className="w-6 h-6 text-white" />
                     </div>
-                    <h4 className="font-bold mb-2 text-orange-400">Workshop "Como Estudar"</h4>
-                    <p className="text-sm text-gray-300">Metodologia comprovada de estudo eficiente</p>
+                    <h4 className="font-bold mb-2 text-orange-400">2 Simulados Finais</h4>
+                    <p className="text-sm text-gray-300">Simulados completos na reta final da sua preparação</p>
                   </div>
                   <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-lg p-6 border border-orange-500/20">
                     <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
