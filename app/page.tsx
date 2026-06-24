@@ -19,7 +19,7 @@ import { useState } from "react";
 export default function LandingPage() {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
-  const checkoutUrl = "https://pay.cakto.com.br/edgu4rv_866566";
+  const checkoutUrl = "https://pay.cakto.com.br/mwxrttx_939974";
 
   return (
     <>
@@ -543,7 +543,7 @@ export default function LandingPage() {
                         </div>
                         <span className="text-base sm:text-lg font-extrabold">Garantir Minha Vaga</span>
                         <div className="bg-yellow-400 text-orange-900 px-3 py-1 rounded-full text-sm font-bold">
-                          10x de R$ 161,35
+                          12x de R$ 82,32
                         </div>
                       </div>
                     </Button>
@@ -1223,7 +1223,7 @@ export default function LandingPage() {
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> especial</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Garanta o valor promocional de apenas 10x de R$ 161,35.
+                  Garanta o valor promocional de apenas 12x de R$ 82,32 ou R$ 797,00 à vista.
                 </p>
               </div>
 
@@ -1310,8 +1310,9 @@ export default function LandingPage() {
                       <div className="relative">
                         {/* Preço principal com efeito de brilho */}
                         <div className="text-5xl md:text-6xl font-black bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
-                          10x de R$ 161,35
+                          12x de R$ 82,32
                         </div>
+                        <p className="mt-2 text-lg font-bold text-green-300">ou R$ 797,00 à vista</p>
 
                         {/* Símbolo de "vale muito a pena" */}
                         <div className="absolute -top-2 -right-2 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
@@ -1323,7 +1324,7 @@ export default function LandingPage() {
                       {/* Economia destacada */}
                       <div className="mt-3 p-2 bg-green-500/20 border border-green-500/30 rounded-lg">
                         <p className="text-green-400 text-sm font-bold">
-                          💰 ECONOMIA DE R$ 387,00 + BÔNUS!
+                          💰 ECONOMIA DE R$ 1.190,00 + BÔNUS!
                         </p>
                       </div>
                     </CardHeader>
@@ -1453,7 +1454,7 @@ export default function LandingPage() {
                         </div>
                         <span className="text-base sm:text-lg font-extrabold">Garantir Minha Vaga</span>
                         <div className="bg-yellow-400 text-orange-900 px-3 py-1 rounded-full text-sm font-bold">
-                          10x de R$ 161,35
+                          12x de R$ 82,32
                         </div>
                       </div>
                     </Button>
