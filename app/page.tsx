@@ -109,11 +109,11 @@ export default function LandingPage() {
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 lg:space-x-8 text-sm text-gray-400 px-4">
                   <div className="flex items-center">
                     <Users className="w-5 h-5 text-purple-500 mr-2" />
-                    <span>+84 alunos aprovados EAOF 2026</span>
+                    <span>+84 alunos aprovados CIAAR</span>
                   </div>
                   <div className="flex items-center">
                     <Award className="w-5 h-5 text-orange-400 mr-2" />
-                    <span>+72 alunos Everest convocados EAOF 2026</span>
+                    <span>+72 alunos Everest convocados CIAAR</span>
                   </div>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export default function LandingPage() {
                 <div className="relative group overflow-hidden">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400 via-green-500 to-emerald-500 opacity-30 blur-sm"></div>
                   <a
-                    href="https://chat.whatsapp.com/D3hgVDf0Rax5Y6wiBjL1PO"
+                    href="https://chat.whatsapp.com/D3hgVDf0Rax5Y6wiBjL1PO?mode=gi_t"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative block"
@@ -311,7 +311,7 @@ export default function LandingPage() {
                   NOSSOS ALUNOS: PARABÉNS AOS APROVADOS!
                 </h2>
                 <p className="text-xl text-gray-300 mb-4">
-                  É com imensa alegria e orgulho que compartilhamos uma grande notícia: das 248 vagas disponíveis, 72 alunos Everest foram convocados e 84 alcançaram a aprovação no EAOF 2026!
+                  É com imensa alegria e orgulho que compartilhamos uma grande notícia: das 248 vagas disponíveis, 72 alunos Everest foram convocados e 84 alcançaram a aprovação no CIAAR!
                 </p>
                 <p className="text-2xl font-bold text-orange-400 mb-4">
                   🏆 A MAIOR APROVAÇÃO DO BRASIL! 🏆
@@ -383,7 +383,7 @@ export default function LandingPage() {
               <div className="text-center mt-12">
                 <div className="inline-flex items-center bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-8 py-4 rounded-full font-semibold text-lg">
                   <Trophy className="w-6 h-6 mr-3" />
-                  Total: {totalAprovadosEAOF2026} Alunos na Lista — EAOF 2026
+                  Total: {totalAprovadosEAOF2026} Alunos na Lista — CIAAR
                 </div>
                 <p className="mt-4 text-sm text-gray-400">
                   {totalConvocadosEAOF2026} convocados e {totalAprovadosEAOF2026 - totalConvocadosEAOF2026} aprovados, classificados por média final
@@ -415,7 +415,7 @@ export default function LandingPage() {
                 <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> vaga no CIAAR 2027?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Junte-se aos 84 alunos aprovados no EAOF 2026 que já passaram com nossa metodologia comprovada.
+                Junte-se aos 84 alunos aprovados no CIAAR que já passaram com nossa metodologia comprovada.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-2 sm:px-4">
                 {/* Botão principal - Premium */}
@@ -512,7 +512,7 @@ export default function LandingPage() {
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> Sucesso</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Assista aos depoimentos reais de alunos que passaram no EAOF usando nossa metodologia
+                  Assista aos depoimentos reais de alunos que passaram no CIAAR usando nossa metodologia
                 </p>
               </div>
 
@@ -545,7 +545,7 @@ export default function LandingPage() {
 
               <div className="text-center mt-12">
                 <p className="text-gray-400 text-sm">
-                  Estes são apenas alguns dos 84 alunos aprovados no EAOF 2026 que usaram nossa metodologia
+                  Estes são apenas alguns dos 84 alunos aprovados no CIAAR que usaram nossa metodologia
                 </p>
               </div>
             </div>
@@ -1026,7 +1026,7 @@ export default function LandingPage() {
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span>Metodologia comprovada com +84 aprovados EAOF 2026</span>
+                      <span>Metodologia comprovada com +84 aprovados CIAAR</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -1048,12 +1048,12 @@ export default function LandingPage() {
                     <h4 className="text-xl font-bold mb-4 text-orange-400">Metodologia Comprovada</h4>
                     <p className="text-gray-300 mb-4">
                       O professor Tiago Costa apresenta o curso com módulos organizados entre teoria e prática,
-                      garantindo uma abordagem estruturada e direta para sua aprovação no EAOF.
+                      garantindo uma abordagem estruturada e direta para sua aprovação no CIAAR.
                     </p>
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div className="flex items-center">
                         <Target className="w-4 h-4 text-orange-400 mr-2" />
-                        <span>Foco no EAOF</span>
+                        <span>Foco no CIAAR</span>
                       </div>
                       <div className="flex items-center">
                         <BookOpen className="w-4 h-4 text-orange-400 mr-2" />
@@ -1061,7 +1061,7 @@ export default function LandingPage() {
                       </div>
                       <div className="flex items-center">
                         <Users className="w-4 h-4 text-orange-400 mr-2" />
-                        <span>+84 Aprovados EAOF 2026</span>
+                        <span>+84 Aprovados CIAAR</span>
                       </div>
                       <div className="flex items-center">
                         <Trophy className="w-4 h-4 text-orange-400 mr-2" />
@@ -1079,7 +1079,7 @@ export default function LandingPage() {
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span>Metodologia testada e aprovada por 84 alunos no EAOF 2026</span>
+                        <span>Metodologia testada e aprovada por 84 alunos no CIAAR</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -1326,7 +1326,7 @@ export default function LandingPage() {
                 <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> vaga no CIAAR 2027?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Junte-se aos 84 alunos aprovados no EAOF 2026 que já passaram com nossa metodologia comprovada.
+                Junte-se aos 84 alunos aprovados no CIAAR que já passaram com nossa metodologia comprovada.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-2 sm:px-4">
                 {/* Botão principal - Premium */}

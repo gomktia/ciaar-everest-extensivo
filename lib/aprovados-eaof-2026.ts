@@ -1,4 +1,4 @@
-// Classificação dos alunos Everest aprovados/convocados no EAOF 2026.
+// Classificação dos alunos Everest aprovados/convocados no CIAAR.
 // Fonte: exports/aprovados (app-everest). Ordenado por média final (desc).
 // media = 0 indica nota não divulgada (renderizar como "—").
 
