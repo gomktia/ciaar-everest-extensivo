@@ -14,6 +14,7 @@ import { YouTubeEmbedOptimized } from "@/components/youtube-embed-optimized";
 import { OptimizedVideo } from "@/components/optimized-video";
 import { MobileVideoStrategy } from "@/components/mobile-video-strategy";
 import { MobileOptimizedImage } from "@/components/mobile-optimized-image";
+import { aprovadosCIAAR, totalAprovadosCIAAR, totalConvocadosCIAAR } from "@/lib/aprovados-ciaar";
 import { useState } from "react";
 
 export default function LandingPage() {
@@ -108,11 +109,11 @@ export default function LandingPage() {
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 lg:space-x-8 text-sm text-gray-400 px-4">
                   <div className="flex items-center">
                     <Users className="w-5 h-5 text-purple-500 mr-2" />
-                    <span>+83 alunos aprovados EAOF 2026</span>
+                    <span>+84 alunos aprovados CIAAR</span>
                   </div>
                   <div className="flex items-center">
                     <Award className="w-5 h-5 text-orange-400 mr-2" />
-                    <span>+72 alunos Everest convocados EAOF 2026</span>
+                    <span>+72 alunos Everest convocados CIAAR</span>
                   </div>
                 </div>
               </div>
@@ -146,7 +147,7 @@ export default function LandingPage() {
                 <div className="relative group overflow-hidden">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400 via-green-500 to-emerald-500 opacity-30 blur-sm"></div>
                   <a
-                    href="https://chat.whatsapp.com/D3hgVDf0Rax5Y6wiBjL1PO"
+                    href="https://chat.whatsapp.com/D3hgVDf0Rax5Y6wiBjL1PO?mode=gi_t"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative block"
@@ -310,7 +311,7 @@ export default function LandingPage() {
                   NOSSOS ALUNOS: PARABÉNS AOS APROVADOS!
                 </h2>
                 <p className="text-xl text-gray-300 mb-4">
-                  É com imensa alegria e orgulho que compartilhamos uma grande notícia: das 248 vagas disponíveis, 72 alunos Everest foram convocados e 83 alcançaram a aprovação no EAOF 2026!
+                  É com imensa alegria e orgulho que compartilhamos uma grande notícia: das 248 vagas disponíveis, 72 alunos Everest foram convocados e 84 alcançaram a aprovação no CIAAR!
                 </p>
                 <p className="text-2xl font-bold text-orange-400 mb-4">
                   🏆 A MAIOR APROVAÇÃO DO BRASIL! 🏆
@@ -320,181 +321,73 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 px-2">
-                {/* Card SVE com efeito LED */}
-                <div className="relative group h-full overflow-hidden">
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500  opacity-75"></div>
-                  <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] border-2 border-blue-500/30 hover:border-blue-500/50 rounded-lg p-4 sm:p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-blue-500/25 h-full flex flex-col m-1">
-                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center flex-shrink-0">
-                      <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
-                      SVE
-                    </h3>
-                    <div className="space-y-2 flex-grow">
-                      <div className="text-sm text-gray-300">🏆 ADRIANO PONTES NEPOMUCENO</div>
-                      <div className="text-sm text-gray-300">🏆 CARLOS MAURÍCIO MACHADO AIETA</div>
-                      <div className="text-sm text-gray-300">🏆 HUMBERTO DA COSTA REZENDE</div>
-                      <div className="text-sm text-gray-300">🏆 LUIS ANDRE GARCIA DA SILVA</div>
-                    </div>
-                  </div>
+              <div className="max-w-5xl mx-auto">
+                {/* Cabeçalho da classificação */}
+                <div className="hidden sm:flex items-center gap-3 px-4 pb-3 text-xs font-semibold uppercase tracking-wider text-gray-500">
+                  <span className="w-10 text-center">#</span>
+                  <span className="flex-1">Aluno</span>
+                  <span className="w-24 text-center">Especialidade</span>
+                  <span className="w-20 text-right">Média</span>
+                  <span className="w-24 text-center">Situação</span>
                 </div>
 
-                {/* Card GDS com efeito LED */}
-                <div className="relative group h-full">
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-green-500 via-emerald-500 to-green-500  opacity-75" style={{ animationDelay: '1s' }}></div>
-                  <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] border-2 border-green-500/30 hover:border-green-500/50 rounded-lg p-4 sm:p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-green-500/25 h-full flex flex-col m-1">
-                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center flex-shrink-0">
-                      <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
-                      GDS
-                    </h3>
-                    <div className="space-y-2 flex-grow">
-                      <div className="text-sm text-gray-300">🏆 ALEXANDRE ALEX LUDOVINO DA FONSECA</div>
-                      <div className="text-sm text-gray-300">🏆 ANDERSON BARBOSA MARTINS</div>
-                      <div className="text-sm text-gray-300">🏆 GILSON CONCEIÇÃO DE ARAÚJO</div>
-                      <div className="text-sm text-gray-300">🏆 MANUEL COSTA SOARES</div>
-                      <div className="text-sm text-gray-300">🏆 ROBSON MARTINS REIS</div>
-                      <div className="text-sm text-gray-300">🏆 THIAGO SOARES DE BARROS</div>
-                    </div>
-                  </div>
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 sm:gap-3">
+                  {aprovadosCIAAR.map((aluno, index) => {
+                    const posicao = index + 1;
+                    const medalha = posicao === 1 ? "🥇" : posicao === 2 ? "🥈" : posicao === 3 ? "🥉" : null;
+                    const isConvocado = aluno.categoria === "convocado";
+                    return (
+                      <div
+                        key={`${aluno.nome}-${index}`}
+                        className="flex items-center gap-3 bg-gradient-to-br from-[#1e293b] to-[#334155] border border-orange-500/10 hover:border-orange-500/40 rounded-lg px-3 sm:px-4 py-2.5 transition-colors duration-200"
+                      >
+                        {/* Posição */}
+                        <div className="w-10 shrink-0 text-center text-base font-bold text-orange-400">
+                          {medalha ?? posicao}
+                        </div>
+                        {/* Nome + especialidade (mobile) */}
+                        <div className="min-w-0 flex-1">
+                          <div className="text-sm font-semibold text-white truncate">{aluno.nome}</div>
+                          <div className="sm:hidden text-xs text-gray-400">{aluno.especialidade}</div>
+                        </div>
+                        {/* Especialidade (desktop) */}
+                        <div className="hidden sm:flex w-24 justify-center">
+                          <span className="inline-block text-xs font-medium px-2 py-0.5 rounded bg-purple-500/15 text-purple-300 border border-purple-500/20">
+                            {aluno.especialidade}
+                          </span>
+                        </div>
+                        {/* Média final */}
+                        <div className="w-16 sm:w-20 shrink-0 text-right">
+                          <span className="text-sm sm:text-base font-bold text-orange-300">
+                            {aluno.media ? aluno.media.toFixed(2).replace(".", ",") : "—"}
+                          </span>
+                        </div>
+                        {/* Situação */}
+                        <div className="hidden sm:flex w-24 justify-center">
+                          <span
+                            className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded-full border ${
+                              isConvocado
+                                ? "bg-green-500/15 text-green-300 border-green-500/20"
+                                : "bg-blue-500/15 text-blue-300 border-blue-500/20"
+                            }`}
+                          >
+                            {isConvocado ? "Convocado" : "Aprovado"}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
-
-                {/* Card CTA com efeito LED */}
-                <div className="relative group h-full">
-                  <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500  opacity-75" style={{ animationDelay: '2s' }}></div>
-                  <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] border-purple-500/20 hover:border-purple-500/40 rounded-lg p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-purple-500/25 h-full flex flex-col">
-                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center flex-shrink-0">
-                      <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
-                      CTA
-                    </h3>
-                    <div className="space-y-2 flex-grow">
-                      <div className="text-sm text-gray-300">🏆 ALINE VEIGA DO NASCIMENTO</div>
-                      <div className="text-sm text-gray-300">🏆 FLÁVIA CARVALHO CALDAS</div>
-                      <div className="text-sm text-gray-300">🏆 GEANDRO PINHEIRO PIRES</div>
-                      <div className="text-sm text-gray-300">🏆 MARCOS CORREIA DOS SANTOS</div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-                {/* ANV - Análise */}
-                <div className="relative group h-full">
-                  <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-red-500 via-pink-500 to-red-500  opacity-75" style={{ animationDelay: '4s' }}></div>
-                  <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] border-red-500/20 hover:border-red-500/40 rounded-lg p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-red-500/25 h-full flex flex-col">
-                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center flex-shrink-0">
-                      <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
-                      ANV
-                    </h3>
-                    <div className="space-y-2 flex-grow">
-                      <div className="text-sm text-gray-300">🏆 DAVID RODRIGO GONÇALVES RIBEIRO</div>
-                      <div className="text-sm text-gray-300">🏆 FÁBIO HENRIQUE PEREIRA DOS SANTOS</div>
-                      <div className="text-sm text-gray-300">🏆 ROBERVAL CORRÊA ESPADIM</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* SVA - Serviços Administrativos */}
-                <div className="relative group h-full">
-                  <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500  opacity-75" style={{ animationDelay: '5s' }}></div>
-                  <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] border-indigo-500/20 hover:border-indigo-500/40 rounded-lg p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-indigo-500/25 h-full flex flex-col">
-                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center flex-shrink-0">
-                      <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
-                      SVA
-                    </h3>
-                    <div className="space-y-2 flex-grow">
-                      <div className="text-sm text-gray-300">🏆 ANDERSON EVANGELISTA DOS SANTOS</div>
-                      <div className="text-sm text-gray-300">🏆 ANTONIO CARLOS MENDONÇA</div>
-                      <div className="text-sm text-gray-300">🏆 EDILSON LINDEMBERG DIAS BARBOSA</div>
-                      <div className="text-sm text-gray-300">🏆 ELVAIR DOS SANTOS LIBORIO</div>
-                      <div className="text-sm text-gray-300">🏆 FABIO MARTINS</div>
-                      <div className="text-sm text-gray-300">🏆 JUSSIÊ BARBOSA DE SOUSA</div>
-                      <div className="text-sm text-gray-300">🏆 LUIZ GUILHERME DOS SANTOS MORAES</div>
-                      <div className="text-sm text-gray-300">🏆 PRISCILA PONTES DOS SANTOS</div>
-                      <div className="text-sm text-gray-300">🏆 SHIRLEY DOS SANTOS</div>
-                      <div className="text-sm text-gray-300">🏆 ROGÉRIO PINTO DE AZEVEDO</div>
-                      <div className="text-sm text-gray-300">🏆 RAQUEL MACIAS DOS SANTOS</div>
-                      <div className="text-sm text-gray-300">🏆 ANDRÉ LUIZ MOREIRA TEIXEIRA</div>
-                      <div className="text-sm text-gray-300">🏆 CLÁUDIO JOSÉ DA SILVA</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* SVH - Serviços Hospitalares */}
-                <div className="relative group h-full">
-                  <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-pink-500 via-rose-500 to-pink-500  opacity-75" style={{ animationDelay: '6s' }}></div>
-                  <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] border-pink-500/20 hover:border-pink-500/40 rounded-lg p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-pink-500/25 h-full flex flex-col">
-                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center flex-shrink-0">
-                      <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
-                      SVH
-                    </h3>
-                    <div className="space-y-2 flex-grow">
-                      <div className="text-sm text-gray-300">🏆 RAQUEL WEISHEIMER DE SOUZA</div>
-                      <div className="text-sm text-gray-300">🏆 THIAGO RODRIGUES EVANGELISTA</div>
-                      <div className="text-sm text-gray-300">🏆 VIVIANE MANHAES XAVIER</div>
-                      <div className="text-sm text-gray-300">🏆 PRISCILA BORDUAM DA SILVA</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* SVI - Serviços de Informática */}
-                <div className="relative group h-full">
-                  <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-teal-500 via-cyan-500 to-teal-500  opacity-75" style={{ animationDelay: '7s' }}></div>
-                  <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] border-teal-500/20 hover:border-teal-500/40 rounded-lg p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-teal-500/25 h-full flex flex-col">
-                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center flex-shrink-0">
-                      <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
-                      SVI
-                    </h3>
-                    <div className="space-y-2 flex-grow">
-                      <div className="text-sm text-gray-300">🏆 ALISSON ALVES OLIVEIRA LEITE</div>
-                      <div className="text-sm text-gray-300">🏆 ANTONIO DE PÁDUA AGUIAR FILHO</div>
-                      <div className="text-sm text-gray-300">🏆 REGINALDO CESAR DUARTE</div>
-                      <div className="text-sm text-gray-300">🏆 VICTOR SALUSTRINO BEZERRA</div>
-                      <div className="text-sm text-gray-300">🏆 WAGNER DOS SANTOS DA SILVA</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* SVM - Serviços de Manutenção */}
-                <div className="relative group h-full">
-                  <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500  opacity-75" style={{ animationDelay: '8s' }}></div>
-                  <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] border-amber-500/20 hover:border-amber-500/40 rounded-lg p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-amber-500/25 h-full flex flex-col">
-                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center flex-shrink-0">
-                      <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
-                      SVM
-                    </h3>
-                    <div className="space-y-2 flex-grow">
-                      <div className="text-sm text-gray-300">🏆 CARLOS EDUARDO BEZERRA DE SOUZA</div>
-                      <div className="text-sm text-gray-300">🏆 WESLEY BARLATTI DE MACEDO</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Outras Especialidades */}
-                <div className="relative group h-full">
-                  <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-gray-500 via-slate-500 to-gray-500  opacity-75" style={{ animationDelay: '9s' }}></div>
-                  <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] border-gray-500/20 hover:border-gray-500/40 rounded-lg p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-gray-500/25 h-full flex flex-col">
-                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center flex-shrink-0">
-                      <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
-                      Outras
-                    </h3>
-                    <div className="space-y-2 flex-grow">
-                      <div className="text-sm text-gray-300">🏆 ANDERSON CARVALHO DE LIMA (MET)</div>
-                      <div className="text-sm text-gray-300">🏆 FERNANDA DE SOUZA BERNARDO (SUP)</div>
-                      <div className="text-sm text-gray-300">🏆 GETULIO TIAGO VALENTE SANFELICE (SUP)</div>
-                      <div className="text-sm text-gray-300">🏆 NATÁLIA FERNANDES GALENO (SIA)</div>
-                      <div className="text-sm text-gray-300">🏆 ROBERTO MÁRCIO DE MELO JUNIOR (FOT)</div>
-                      <div className="text-sm text-gray-300">🏆 ALEX DIAS GUIMARÃES (SIA)</div>
-                      <div className="text-sm text-gray-300">🏆 ANTONIO FIDELIS DIAS (SIA)</div>
-                    </div>
-                  </div>
-                </div>
-
               </div>
 
               <div className="text-center mt-12">
                 <div className="inline-flex items-center bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-8 py-4 rounded-full font-semibold text-lg">
                   <Trophy className="w-6 h-6 mr-3" />
-                  Total: 83 Alunos Aprovados EAOF 2026
+                  Total: {totalAprovadosCIAAR} Alunos na Lista — CIAAR
                 </div>
+                <p className="mt-4 text-sm text-gray-400">
+                  {totalConvocadosCIAAR} convocados e {totalAprovadosCIAAR - totalConvocadosCIAAR} aprovados, classificados por média final
+                </p>
               </div>
 
               {/* Texto completo sobre os aprovados */}
@@ -522,7 +415,7 @@ export default function LandingPage() {
                 <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> vaga no CIAAR 2027?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Junte-se aos 83 alunos aprovados no EAOF 2026 que já passaram com nossa metodologia comprovada.
+                Junte-se aos 84 alunos aprovados no CIAAR que já passaram com nossa metodologia comprovada.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-2 sm:px-4">
                 {/* Botão principal - Premium */}
@@ -619,7 +512,7 @@ export default function LandingPage() {
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> Sucesso</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Assista aos depoimentos reais de alunos que passaram no EAOF usando nossa metodologia
+                  Assista aos depoimentos reais de alunos que passaram no CIAAR usando nossa metodologia
                 </p>
               </div>
 
@@ -652,7 +545,7 @@ export default function LandingPage() {
 
               <div className="text-center mt-12">
                 <p className="text-gray-400 text-sm">
-                  Estes são apenas alguns dos 83 alunos aprovados no EAOF 2026 que usaram nossa metodologia
+                  Estes são apenas alguns dos 84 alunos aprovados no CIAAR que usaram nossa metodologia
                 </p>
               </div>
             </div>
@@ -1133,7 +1026,7 @@ export default function LandingPage() {
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span>Metodologia comprovada com +83 aprovados EAOF 2026</span>
+                      <span>Metodologia comprovada com +84 aprovados CIAAR</span>
                     </div>
                     <div className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -1155,12 +1048,12 @@ export default function LandingPage() {
                     <h4 className="text-xl font-bold mb-4 text-orange-400">Metodologia Comprovada</h4>
                     <p className="text-gray-300 mb-4">
                       O professor Tiago Costa apresenta o curso com módulos organizados entre teoria e prática,
-                      garantindo uma abordagem estruturada e direta para sua aprovação no EAOF.
+                      garantindo uma abordagem estruturada e direta para sua aprovação no CIAAR.
                     </p>
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div className="flex items-center">
                         <Target className="w-4 h-4 text-orange-400 mr-2" />
-                        <span>Foco no EAOF</span>
+                        <span>Foco no CIAAR</span>
                       </div>
                       <div className="flex items-center">
                         <BookOpen className="w-4 h-4 text-orange-400 mr-2" />
@@ -1168,7 +1061,7 @@ export default function LandingPage() {
                       </div>
                       <div className="flex items-center">
                         <Users className="w-4 h-4 text-orange-400 mr-2" />
-                        <span>+83 Aprovados EAOF 2026</span>
+                        <span>+84 Aprovados CIAAR</span>
                       </div>
                       <div className="flex items-center">
                         <Trophy className="w-4 h-4 text-orange-400 mr-2" />
@@ -1186,7 +1079,7 @@ export default function LandingPage() {
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span>Metodologia testada e aprovada por 83 alunos no EAOF 2026</span>
+                        <span>Metodologia testada e aprovada por 84 alunos no CIAAR</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -1433,7 +1326,7 @@ export default function LandingPage() {
                 <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> vaga no CIAAR 2027?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Junte-se aos 83 alunos aprovados no EAOF 2026 que já passaram com nossa metodologia comprovada.
+                Junte-se aos 84 alunos aprovados no CIAAR que já passaram com nossa metodologia comprovada.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-2 sm:px-4">
                 {/* Botão principal - Premium */}

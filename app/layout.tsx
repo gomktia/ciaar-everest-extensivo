@@ -18,9 +18,9 @@ export const metadata = {
     default: "Everest Preparatórios - Preparação Completa para CIAAR",
     template: "%s | Everest Preparatórios"
   },
-  description: "Plataforma completa de estudos com flashcards avançados, simulados e correção de redações para concursos militares da aeronáutica. +785 flashcards, +83 alunos aprovados e +72 convocados Everest no EAOF 2026.",
+  description: "Plataforma completa de estudos com flashcards avançados, simulados e correção de redações para concursos militares da aeronáutica. +785 flashcards, +84 alunos aprovados e +72 convocados Everest no CIAAR.",
   keywords: [
-    "CIAAR", "concurso militar", "aeronáutica", "preparatório", "EAOF",
+    "CIAAR", "concurso militar", "aeronáutica", "preparatório",
     "português", "redação", "flashcards", "simulados", "Professor Tiago Costa",
     "concurso público", "militar", "preparação", "estudo"
   ],
