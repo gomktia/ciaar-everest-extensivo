@@ -869,9 +869,9 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                         <Target className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">10 Simulados</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">6 Simulados</CardTitle>
                       <CardDescription className="text-gray-300">
-                        10 provas simuladas com 10 temas de redação
+                        6 provas simuladas com 6 temas de redação
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow flex flex-col justify-end">
@@ -1233,7 +1233,7 @@ export default function LandingPage() {
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                          <span className="text-green-300 font-semibold">10 simulados + 6 redações corrigidas</span>
+                          <span className="text-green-300 font-semibold">6 simulados + 6 redações corrigidas</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
