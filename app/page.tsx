@@ -792,7 +792,7 @@ export default function LandingPage() {
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> incluído</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Semi Extensivo CIAAR 2027 com acesso por 12 meses. Tudo que você precisa para passar no CIAAR.
+                  Semi Extensivo CIAAR 2027 com acesso até 2 dias antes da prova. Tudo que você precisa para passar no CIAAR.
                 </p>
               </div>
 
@@ -901,7 +901,7 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-4">
                         <Headphones className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">24 Mentorias ao Vivo</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">14 Mentorias ao Vivo</CardTitle>
                       <CardDescription className="text-gray-300">
                         Mentorias ao vivo para dúvidas e prática de questões - início em abril
                       </CardDescription>
@@ -965,7 +965,7 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                         <Award className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">10 Redações Corrigidas</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">6 Redações Corrigidas</CardTitle>
                       <CardDescription className="text-gray-300">
                         Correção detalhada com laudo avaliativo e auxílio de IA
                       </CardDescription>
@@ -1022,6 +1022,9 @@ export default function LandingPage() {
                   <h3 className="text-2xl font-bold mb-4 text-orange-400">Tiago Costa de Oliveira</h3>
                   <p className="text-lg text-gray-300 mb-6">
                     Especialista dedicado exclusivamente aos concursos militares
+                  </p>
+                  <p className="text-base text-gray-300 mb-6 leading-relaxed text-justify">
+                    O professor Tiago Costa é licenciado em Letras — Português, Espanhol e respectivas Literaturas, especialista em Metodologia do Ensino e Mestre em Tecnologias Educacionais em Rede. Atua na preparação de alunos para concursos há pouco mais de 16 anos e é proprietário e idealizador do Curso Everest. Ministrou aulas nos principais cursos preparatórios da região Sul do País, além de ter feito parte do corpo docente do Colégio Militar de Santa Maria por 5 anos.
                   </p>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-center">
@@ -1230,11 +1233,11 @@ export default function LandingPage() {
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                          <span className="text-green-300 font-semibold">10 simulados + 10 redações corrigidas</span>
+                          <span className="text-green-300 font-semibold">10 simulados + 6 redações corrigidas</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                          <span className="text-green-300 font-semibold">24 mentorias ao vivo + acesso 12 meses</span>
+                          <span className="text-green-300 font-semibold">14 mentorias ao vivo + acesso até 2 dias antes da prova</span>
                         </li>
                       </ul>
 
