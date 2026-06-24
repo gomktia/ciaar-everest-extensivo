@@ -219,7 +219,7 @@ export default function LandingPage() {
 
                         <h3 className="text-2xl font-bold mb-2 text-orange-400">Turma de Degustação</h3>
                         <p className="text-gray-300 mb-4">
-                          Extensivo CIAAR 2027<br />
+                          Semi Extensivo CIAAR 2027<br />
                           <span className="text-sm text-orange-300/80">Experimente a plataforma gratuitamente</span>
                         </p>
 
@@ -899,7 +899,7 @@ export default function LandingPage() {
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> incluído</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Extensivo CIAAR 2027 com acesso por 12 meses. Tudo que você precisa para passar no CIAAR.
+                  Semi Extensivo CIAAR 2027 com acesso por 12 meses. Tudo que você precisa para passar no CIAAR.
                 </p>
               </div>
 
