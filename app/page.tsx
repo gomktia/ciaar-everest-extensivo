@@ -14,7 +14,7 @@ import { YouTubeEmbedOptimized } from "@/components/youtube-embed-optimized";
 import { OptimizedVideo } from "@/components/optimized-video";
 import { MobileVideoStrategy } from "@/components/mobile-video-strategy";
 import { MobileOptimizedImage } from "@/components/mobile-optimized-image";
-import { aprovadosEAOF2026, totalAprovadosEAOF2026, totalConvocadosEAOF2026 } from "@/lib/aprovados-eaof-2026";
+import { aprovadosCIAAR, totalAprovadosCIAAR, totalConvocadosCIAAR } from "@/lib/aprovados-ciaar";
 import { useState } from "react";
 
 export default function LandingPage() {
@@ -332,7 +332,7 @@ export default function LandingPage() {
                 </div>
 
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 sm:gap-3">
-                  {aprovadosEAOF2026.map((aluno, index) => {
+                  {aprovadosCIAAR.map((aluno, index) => {
                     const posicao = index + 1;
                     const medalha = posicao === 1 ? "🥇" : posicao === 2 ? "🥈" : posicao === 3 ? "🥉" : null;
                     const isConvocado = aluno.categoria === "convocado";
@@ -383,10 +383,10 @@ export default function LandingPage() {
               <div className="text-center mt-12">
                 <div className="inline-flex items-center bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-8 py-4 rounded-full font-semibold text-lg">
                   <Trophy className="w-6 h-6 mr-3" />
-                  Total: {totalAprovadosEAOF2026} Alunos na Lista — CIAAR
+                  Total: {totalAprovadosCIAAR} Alunos na Lista — CIAAR
                 </div>
                 <p className="mt-4 text-sm text-gray-400">
-                  {totalConvocadosEAOF2026} convocados e {totalAprovadosEAOF2026 - totalConvocadosEAOF2026} aprovados, classificados por média final
+                  {totalConvocadosCIAAR} convocados e {totalAprovadosCIAAR - totalConvocadosCIAAR} aprovados, classificados por média final
                 </p>
               </div>
 

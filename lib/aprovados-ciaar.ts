@@ -2,14 +2,14 @@
 // Fonte: exports/aprovados (app-everest). Ordenado por média final (desc).
 // media = 0 indica nota não divulgada (renderizar como "—").
 
-export type AprovadoEAOF = {
+export type AprovadoCIAAR = {
   nome: string;
   especialidade: string;
   media: number;
   categoria: "convocado" | "aprovado";
 };
 
-export const aprovadosEAOF2026: AprovadoEAOF[] = [
+export const aprovadosCIAAR: AprovadoCIAAR[] = [
   { nome: "CARLOS EDUARDO CESAR COSTA", especialidade: "COM", media: 9.43, categoria: "convocado" },
   { nome: "GIORDANE DE SOUZA LIMA", especialidade: "COM", media: 9.27, categoria: "convocado" },
   { nome: "ALEX TEIXEIRA DE FREITAS", especialidade: "COM", media: 9.12, categoria: "convocado" },
@@ -96,5 +96,5 @@ export const aprovadosEAOF2026: AprovadoEAOF[] = [
   { nome: "TARCÍSIO EMMANUEL DE BARROS MEDEIROS", especialidade: "COM", media: 0, categoria: "convocado" },
 ];
 
-export const totalAprovadosEAOF2026 = aprovadosEAOF2026.length;
-export const totalConvocadosEAOF2026 = aprovadosEAOF2026.filter((a) => a.categoria === "convocado").length;
+export const totalAprovadosCIAAR = aprovadosCIAAR.length;
+export const totalConvocadosCIAAR = aprovadosCIAAR.filter((a) => a.categoria === "convocado").length;
