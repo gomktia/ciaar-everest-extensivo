@@ -523,7 +523,7 @@ export default function LandingPage() {
                   { id: "lssL3Hw-krc", title: "Depoimento 3", desc: "Sonho realizado! Agora sou oficial da Aeronáutica!" },
                   { id: "nuYHx5ajoTI", title: "Depoimento 4", desc: "A plataforma completa fez toda a diferença na minha aprovação" },
                   { id: "8MODKdxPo6U", title: "Depoimento 5", desc: "O suporte do Professor Tiago foi essencial para minha conquista" },
-                  { id: "2CnIID2l3aI", title: "Depoimento 6", desc: "O curso transformou minha preparação e me deu confiança para a prova" },
+                  { id: "O4hM0N6WxM0", title: "Depoimento 6", desc: "O curso transformou minha preparação e me deu confiança para a prova" },
                 ].map((v, i) => (
                   <div key={i} className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-2xl p-4 sm:p-5 border-2 border-orange-500/30 shadow-lg">
                     <div className="aspect-[9/16] bg-black rounded-xl overflow-hidden mb-4 border border-orange-500/20 relative">
