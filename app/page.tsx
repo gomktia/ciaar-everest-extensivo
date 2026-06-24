@@ -339,7 +339,7 @@ export default function LandingPage() {
                     return (
                       <div
                         key={`${aluno.nome}-${index}`}
-                        className="flex items-center gap-3 bg-gradient-to-br from-[#1e293b] to-[#334155] border border-orange-500/10 hover:border-orange-500/40 rounded-lg px-3 sm:px-4 py-2.5 transition-colors duration-200"
+                        className="flex items-center gap-3 bg-gradient-to-br from-[#0f172a] to-[#1e293b] border border-orange-500/10 hover:border-orange-500/40 rounded-lg px-3 sm:px-4 py-2.5 transition-colors duration-200"
                       >
                         {/* Posição */}
                         <div className="w-10 shrink-0 text-center text-base font-bold text-orange-400">
@@ -523,7 +523,7 @@ export default function LandingPage() {
                   { id: "lssL3Hw-krc", title: "Depoimento 3", desc: "Sonho realizado! Agora sou oficial da Aeronáutica!" },
                   { id: "nuYHx5ajoTI", title: "Depoimento 4", desc: "A plataforma completa fez toda a diferença na minha aprovação" },
                   { id: "8MODKdxPo6U", title: "Depoimento 5", desc: "O suporte do Professor Tiago foi essencial para minha conquista" },
-                  { id: "2CnIID2l3aI", title: "Depoimento 6", desc: "O curso transformou minha preparação e me deu confiança para a prova" },
+                  { id: "O4hM0N6WxM0", title: "Depoimento 6", desc: "O curso transformou minha preparação e me deu confiança para a prova" },
                 ].map((v, i) => (
                   <div key={i} className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-2xl p-4 sm:p-5 border-2 border-orange-500/30 shadow-lg">
                     <div className="aspect-[9/16] bg-black rounded-xl overflow-hidden mb-4 border border-orange-500/20 relative">
@@ -792,7 +792,7 @@ export default function LandingPage() {
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> incluído</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Semi Extensivo CIAAR 2027 com acesso por 12 meses. Tudo que você precisa para passar no CIAAR.
+                  Semi Extensivo CIAAR 2027 com acesso até 2 dias antes da prova. Tudo que você precisa para passar no CIAAR.
                 </p>
               </div>
 
@@ -901,7 +901,7 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-4">
                         <Headphones className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">24 Mentorias ao Vivo</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">14 Mentorias ao Vivo</CardTitle>
                       <CardDescription className="text-gray-300">
                         Mentorias ao vivo para dúvidas e prática de questões - início em abril
                       </CardDescription>
@@ -965,7 +965,7 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                         <Award className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">10 Redações Corrigidas</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">6 Redações Corrigidas</CardTitle>
                       <CardDescription className="text-gray-300">
                         Correção detalhada com laudo avaliativo e auxílio de IA
                       </CardDescription>
@@ -1022,6 +1022,9 @@ export default function LandingPage() {
                   <h3 className="text-2xl font-bold mb-4 text-orange-400">Tiago Costa de Oliveira</h3>
                   <p className="text-lg text-gray-300 mb-6">
                     Especialista dedicado exclusivamente aos concursos militares
+                  </p>
+                  <p className="text-base text-gray-300 mb-6 leading-relaxed text-justify">
+                    O professor Tiago Costa é licenciado em Letras — Português, Espanhol e respectivas Literaturas, especialista em Metodologia do Ensino e Mestre em Tecnologias Educacionais em Rede. Atua na preparação de alunos para concursos há pouco mais de 16 anos e é proprietário e idealizador do Curso Everest. Ministrou aulas nos principais cursos preparatórios da região Sul do País, além de ter feito parte do corpo docente do Colégio Militar de Santa Maria por 5 anos.
                   </p>
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-center">
@@ -1230,11 +1233,11 @@ export default function LandingPage() {
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                          <span className="text-green-300 font-semibold">10 simulados + 10 redações corrigidas</span>
+                          <span className="text-green-300 font-semibold">10 simulados + 6 redações corrigidas</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                          <span className="text-green-300 font-semibold">24 mentorias ao vivo + acesso 12 meses</span>
+                          <span className="text-green-300 font-semibold">14 mentorias ao vivo + acesso até 2 dias antes da prova</span>
                         </li>
                       </ul>
 
@@ -1284,15 +1287,15 @@ export default function LandingPage() {
                     <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
                       <Bookmark className="w-6 h-6 text-white" />
                     </div>
-                    <h4 className="font-bold mb-2 text-orange-400">E-book "Dicas de Prova"</h4>
-                    <p className="text-sm text-gray-300">50 dicas exclusivas para maximizar sua pontuação</p>
+                    <h4 className="font-bold mb-2 text-orange-400">INTENSIVO pré-prova CIAAR 2028</h4>
+                    <p className="text-sm text-gray-300">De fevereiro a maio</p>
                   </div>
                   <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-lg p-6 border border-orange-500/20">
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
                       <TrendingUp className="w-6 h-6 text-white" />
                     </div>
-                    <h4 className="font-bold mb-2 text-orange-400">Workshop "Como Estudar"</h4>
-                    <p className="text-sm text-gray-300">Metodologia comprovada de estudo eficiente</p>
+                    <h4 className="font-bold mb-2 text-orange-400">2 Simulados Finais</h4>
+                    <p className="text-sm text-gray-300">Simulados completos na reta final da sua preparação</p>
                   </div>
                   <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-lg p-6 border border-orange-500/20">
                     <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
