@@ -104,16 +104,23 @@ export default function LandingPage() {
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
                   A plataforma mais completa para estudar Português e Redação para o CIAAR 2027.
-                  <span className="text-orange-400 font-semibold"> 196 aulas, +131 horas, 3.095 flashcards, 6.213 quizzes</span>, simulados, correção de redações e mentorias ao vivo.
+                  <span className="text-orange-400 font-semibold"> 196 aulas GRAVADAS, +131 horas, 3.095 flashcards, 6.213 quizzes</span>, simulados, correção de redações e mentorias ao vivo.
+                </p>
+                <p className="text-base sm:text-lg font-bold text-orange-400 mb-4 px-4">
+                  Há 16 anos preparando para o CIAAR
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 lg:space-x-8 text-sm text-gray-400 px-4">
                   <div className="flex items-center">
                     <Users className="w-5 h-5 text-purple-500 mr-2" />
-                    <span>+84 alunos aprovados CIAAR</span>
+                    <span>210 alunos aprovados desde 2010</span>
                   </div>
                   <div className="flex items-center">
                     <Award className="w-5 h-5 text-orange-400 mr-2" />
-                    <span>+72 alunos Everest convocados CIAAR</span>
+                    <span>+44 alunos convocados CIAAR / EAOF 2025</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Trophy className="w-5 h-5 text-orange-400 mr-2" />
+                    <span>+72 alunos convocados só no último CIAAR / EAOF 2026</span>
                   </div>
                 </div>
               </div>
@@ -308,16 +315,16 @@ export default function LandingPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  NOSSOS ALUNOS: PARABÉNS AOS APROVADOS!
+                  NOSSOS ALUNOS: PARABÉNS AOS CONVOCADOS!
                 </h2>
                 <p className="text-xl text-gray-300 mb-4">
-                  É com imensa alegria e orgulho que compartilhamos uma grande notícia: das 248 vagas disponíveis, 72 alunos Everest foram convocados e 84 alcançaram a aprovação no CIAAR!
+                  Das 248 vagas disponíveis CIAAR / EAOF 2026, 84 alunos foram aprovados e 72 convocados para a próxima fase do concurso!
                 </p>
                 <p className="text-2xl font-bold text-orange-400 mb-4">
                   🏆 A MAIOR APROVAÇÃO DO BRASIL! 🏆
                 </p>
                 <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                  Confira abaixo a lista completa dos nossos campeões aprovados:
+                  Confira abaixo a lista completa dos nossos campeões:
                 </p>
               </div>
 
@@ -383,7 +390,7 @@ export default function LandingPage() {
               <div className="text-center mt-12">
                 <div className="inline-flex items-center bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-8 py-4 rounded-full font-semibold text-lg">
                   <Trophy className="w-6 h-6 mr-3" />
-                  Total: {totalAprovadosCIAAR} Alunos na Lista — CIAAR
+                  Total: {totalAprovadosCIAAR} Alunos na Lista — EAOF / CIAAR 2026
                 </div>
                 <p className="mt-4 text-sm text-gray-400">
                   {totalConvocadosCIAAR} convocados e {totalAprovadosCIAAR - totalConvocadosCIAAR} aprovados, classificados por média final
@@ -393,14 +400,8 @@ export default function LandingPage() {
               {/* Texto completo sobre os aprovados */}
               <div className="mt-16 text-center">
                 <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-2xl p-8 border border-orange-500/20">
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    Cada nome nesta lista representa uma jornada de muito estudo, persistência e dedicação. Ver o sucesso de vocês é a nossa maior recompensa e a prova do compromisso do Professor Tiago Costa com a excelência no ensino.
-                  </p>
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    Parabenizamos a todos que alcançaram este objetivo tão significativo e desejamos ainda mais sucesso nesta nova etapa!
-                  </p>
-                  <p className="text-lg text-gray-300 leading-relaxed">
-                    A todos os nossos aprovados, recebam novamente os nossos mais sinceros parabéns por essa grande conquista! Que esta seja a primeira de muitas vitórias em suas jornadas.
+                  <p className="text-lg md:text-xl text-gray-200 leading-relaxed italic">
+                    “Em 15 anos de mercado, o Everest se consolidou como o preparatório com o maior número de aprovados para o EAOF. Não é sorte — é método, plataforma própria e preparação que funciona.”
                   </p>
                 </div>
               </div>
@@ -475,11 +476,11 @@ export default function LandingPage() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  Conheça o
-                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> Professor Tiago Costa</span>
+                  Por que somos o curso
+                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> que mais aprova?</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Assista ao vídeo e entenda como nossa metodologia funciona.
+                  Assista ao vídeo e entenda um pouco mais sobre a nossa metodologia
                 </p>
               </div>
 
@@ -488,7 +489,7 @@ export default function LandingPage() {
                 <div className="relative overflow-hidden">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500 via-red-500 to-orange-500  opacity-75 blur-sm"></div>
                   <YouTubeEmbedOptimized
-                    videoId="3Yq9DtPtyd4"
+                    videoId="T-R-cGtjqrU"
                     title="Vídeo Demonstrativo - Everest Preparatórios"
                     className="w-full max-w-4xl mx-auto"
                   />
@@ -508,8 +509,8 @@ export default function LandingPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  Cases de
-                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> Sucesso</span>
+                  Quem já passou sabe:
+                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> o método funciona</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Assista aos depoimentos reais de alunos que passaram no CIAAR usando nossa metodologia
@@ -1194,7 +1195,7 @@ export default function LandingPage() {
                         <Badge className="relative bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 text-sm font-bold border-2 border-orange-300/50 shadow-lg whitespace-nowrap">
                           <div className="flex items-center space-x-2">
                             <Gift className="w-4 h-4 text-yellow-300 flex-shrink-0" />
-                            <span>OFERTA LIMITADA - Até 02/04</span>
+                            <span>OFERTA LIMITADA - Até 03/08</span>
                             <div className="w-2 h-2 bg-yellow-300 rounded-full animate-pulse flex-shrink-0"></div>
                           </div>
                         </Badge>
