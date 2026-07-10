@@ -504,6 +504,45 @@ export default function LandingPage() {
             </div>
           </section>
 
+          {/* SEÇÃO 3 — Diferencial Competitivo */}
+          <section className="py-20 bg-black relative overflow-hidden">
+            {/* Background animado com efeitos LED */}
+            <div className="absolute inset-0 bg-black">
+              <div className="absolute top-20 left-20 w-48 h-48 md:w-72 md:h-72 bg-gradient-to-r from-blue-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-20 right-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
+
+            {/* Grid pattern futurístico */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:50px_50px]"></div>
+
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  Por que o Everest é
+                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> diferente de qualquer outro cursinho?</span>
+                </h2>
+              </div>
+
+              <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+                <p>
+                  A maioria dos cursinhos funciona assim: aula ao vivo em data marcada, você assiste no horário, e se perder, espera o vídeo ficar disponível. Você fica refém do calendário deles.
+                </p>
+                <p>
+                  No Everest, a gente inverteu a lógica: <span className="text-orange-400 font-semibold">todas as aulas já estão gravadas</span>. Você investe no curso e começa a assistir na mesma hora. 196 aulas gravadas, mais de 131 horas de conteúdo de Gramática e Redação, do básico ao avançado — disponíveis agora, não quando o cronograma deixar.
+                </p>
+                <p>
+                  E as <span className="text-orange-400 font-semibold">14 mentorias ao vivo</span>? Essas são um dos nossos diferenciais: encontros periódicos que NÃO são aulas, são mentorias para você aprender estratégias de resolução de questões que caíram em prova, tirar dúvidas em tempo real, e receber complementações das aulas gravadas de forma personalizada.
+                </p>
+              </div>
+
+              <div className="mt-10 text-center bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-2xl p-8 border border-orange-500/20">
+                <p className="text-xl md:text-2xl font-bold text-white">
+                  É o melhor dos dois mundos: a <span className="text-orange-400">flexibilidade do curso gravado</span> com o <span className="text-orange-400">suporte do ao vivo</span>.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Cases de Sucesso - Vídeos */}
           <section className="py-20 bg-black">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -993,6 +1032,116 @@ export default function LandingPage() {
             </div>
           </section>
 
+          {/* SEÇÃO 5 — Correção de Redação (Destaque Especial) */}
+          <section className="py-20 bg-black relative overflow-hidden">
+            {/* Background animado com efeitos LED */}
+            <div className="absolute inset-0 bg-black">
+              <div className="absolute top-20 left-20 w-48 h-48 md:w-72 md:h-72 bg-gradient-to-r from-orange-500/25 to-red-500/25 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-20 right-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-purple-500/25 to-pink-500/25 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
+
+            {/* Grid pattern futurístico */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:50px_50px]"></div>
+
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div className="text-center mb-10">
+                <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30">
+                  <Award className="w-4 h-4 mr-2" />
+                  Destaque Especial
+                </Badge>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  🎯 O diferencial que
+                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> mais faz diferença na sua nota</span>
+                </h2>
+              </div>
+
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 rounded-2xl blur-lg opacity-40"></div>
+                <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-2xl p-6 sm:p-8 border-2 border-orange-500/30">
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                    Sabe por que <span className="text-orange-400 font-semibold">80% dos alunos vão mal na redação</span>? Não é falta de conteúdo — é falta de correção de qualidade.
+                  </p>
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                    No Everest, cada redação que você envia recebe:
+                  </p>
+                  <ul className="space-y-4 mb-6">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-300"><span className="text-white font-semibold">Laudo avaliativo completo</span> — nota detalhada por competência</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-300"><span className="text-white font-semibold">Sugestões de melhoria</span> — o que exatamente ajustar</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-300"><span className="text-white font-semibold">Auxílio de IA</span> — tecnologia que acelera o feedback sem perder o olho humano do professor</span>
+                    </li>
+                  </ul>
+                  <p className="text-lg text-white font-semibold leading-relaxed">
+                    Você não descobre apenas sua nota. Você descobre onde errou, por que errou e exatamente o que fazer para não errar de novo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* SEÇÃO 6 — Bônus: Intensivo CIAAR */}
+          <section className="py-20 bg-black relative overflow-hidden">
+            {/* Background animado com efeitos LED */}
+            <div className="absolute inset-0 bg-black">
+              <div className="absolute top-20 left-20 w-48 h-48 md:w-72 md:h-72 bg-gradient-to-r from-green-500/25 to-emerald-500/25 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-20 right-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-blue-500/25 to-cyan-500/25 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
+
+            {/* Grid pattern futurístico */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:50px_50px]"></div>
+
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                  🔥 Bônus Exclusivo para Alunos Civis:
+                  <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Intensivo CIAAR Incluso</span>
+                </h2>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-2xl p-6 sm:p-8 border border-orange-500/20">
+                <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+                  <p>
+                    Se você é civil e está de olho no concurso CIAAR, aqui vai o que faz o Semi-Extensivo valer ainda mais a pena:
+                  </p>
+                  <p>
+                    Quem adquire o Semi-Extensivo leva de bônus o curso <span className="text-orange-400 font-semibold">Intensivo CIAAR</span>, que começa logo após a prova do EAOF.
+                  </p>
+                  <p>
+                    Isso significa que você continua se preparando para o concurso CIAAR civis (prova em junho):
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 my-8">
+                  <div className="bg-black/30 rounded-xl p-6 border border-orange-500/20">
+                    <div className="flex items-center mb-3">
+                      <div className="w-9 h-9 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">1</div>
+                      <span className="font-bold text-orange-400">Primeiro</span>
+                    </div>
+                    <p className="text-gray-300">Foco total no EAOF (prova em fevereiro) com o conteúdo completo do Semi-Extensivo.</p>
+                  </div>
+                  <div className="bg-black/30 rounded-xl p-6 border border-orange-500/20">
+                    <div className="flex items-center mb-3">
+                      <div className="w-9 h-9 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">2</div>
+                      <span className="font-bold text-orange-400">Depois</span>
+                    </div>
+                    <p className="text-gray-300">Migração automática para o Intensivo CIAAR, com conteúdo direcionado para a prova de junho.</p>
+                  </div>
+                </div>
+
+                <p className="text-center text-xl md:text-2xl font-bold text-orange-400">
+                  Duas preparações, um investimento.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Professor Tiago Costa Section */}
           <section id="sobre" className="py-20 bg-black relative overflow-hidden">
             {/* Background animado com efeitos LED */}
@@ -1096,6 +1245,72 @@ export default function LandingPage() {
                     </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* SEÇÃO 9 — FAQ */}
+          <section className="py-20 bg-black relative overflow-hidden">
+            {/* Background animado com efeitos LED */}
+            <div className="absolute inset-0 bg-black">
+              <div className="absolute top-20 left-20 w-48 h-48 md:w-72 md:h-72 bg-gradient-to-r from-blue-500/25 to-cyan-500/25 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-20 right-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-purple-500/25 to-pink-500/25 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
+
+            {/* Grid pattern futurístico */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:50px_50px]"></div>
+
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">❓ Perguntas Frequentes</span>
+                </h2>
+              </div>
+
+              <div className="space-y-4">
+                {[
+                  {
+                    q: "1. Como funciona o Semi-Extensivo CIAAR?",
+                    a: "É um curso de preparação focado em Português (GIT) e Redação para o concurso CIAAR. Você recebe acesso imediato a todas as aulas gravadas, flashcards, questões, simulados, correção de redação com IA e 14 mentorias ao vivo.",
+                  },
+                  {
+                    q: "2. Qual a diferença entre o Semi-Extensivo e o Extensivo EAOF?",
+                    a: "O Semi-Extensivo tem carga horária mais enxuta e valor mais acessível. É ideal para quem quer o melhor custo-benefício. O Extensivo é o pacote completo com maior número de aulas e recursos. Ambos usam a mesma metodologia.",
+                  },
+                  {
+                    q: "3. Quando começa o curso? Posso começar agora?",
+                    a: "Imediatamente. Diferente dos concorrentes, todas as aulas já estão gravadas na plataforma. Você adquire e começa a estudar na mesma hora. As mentorias ao vivo têm calendário próprio, mas o conteúdo principal já está 100% disponível.",
+                  },
+                  {
+                    q: "4. Sou civil, esse curso serve para mim?",
+                    a: "Sim. O Semi-Extensivo cobre Português e Redação, que são as matérias que mais derrubam candidatos civis e militares. E como bônus, você leva o Intensivo CIAAR após a prova do EAOF — preparação específica para o concurso civil.",
+                  },
+                  {
+                    q: "5. Como funciona a correção de redação?",
+                    a: "Você envia sua redação pela plataforma e recebe uma correção detalhada com laudo avaliativo completo, sugestões de melhoria e auxílio de IA. Não é apenas uma nota — é um diagnóstico individual de desempenho.",
+                  },
+                  {
+                    q: "6. E se eu não gostar? Tem garantia?",
+                    a: "Sim. Você pode testar a plataforma gratuitamente pela degustação antes de comprar. Após a compra, você tem até 7 dias para pedir a devolução do seu dinheiro.",
+                  },
+                  {
+                    q: "7. Até quando o valor especial está disponível?",
+                    a: "O valor de pré-lançamento é válido até o dia 3 de agosto de 2026, data da live inaugural do Semi-Extensivo. Após essa data, o preço será reajustado.",
+                  },
+                ].map((item, i) => (
+                  <details
+                    key={i}
+                    className="group bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-xl border border-orange-500/20 hover:border-orange-500/40 transition-colors duration-200 overflow-hidden"
+                  >
+                    <summary className="flex items-center justify-between cursor-pointer px-6 py-5 text-base sm:text-lg font-semibold text-white list-none">
+                      <span>{item.q}</span>
+                      <ArrowRight className="w-5 h-5 text-orange-400 transition-transform duration-300 group-open:rotate-90 flex-shrink-0 ml-4" />
+                    </summary>
+                    <div className="px-6 pb-5 text-gray-300 leading-relaxed">
+                      {item.a}
+                    </div>
+                  </details>
+                ))}
               </div>
             </div>
           </section>
