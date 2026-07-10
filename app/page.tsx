@@ -449,7 +449,7 @@ export default function LandingPage() {
                 <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> vaga no CIAAR 2027?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Junte-se aos 84 alunos aprovados no CIAAR que já passaram com nossa metodologia comprovada.
+                Junte-se aos 210 aprovados no CIAAR que já passaram com nossa metodologia comprovada.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-2 sm:px-4">
                 {/* Botão principal - Premium */}
@@ -1496,7 +1496,7 @@ export default function LandingPage() {
               {/* Bônus */}
               <div className="mt-12 text-center">
                 <h3 className="text-2xl font-bold mb-8">
-                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Bônus Exclusivos</span> (Valor: R$ 387,00)
+                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Bônus Exclusivos</span> (Valor: R$ 537,00)
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-2">
                   <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-lg p-6 border border-orange-500/20">
@@ -1545,7 +1545,7 @@ export default function LandingPage() {
                 <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> vaga no CIAAR 2027?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Junte-se aos 84 alunos aprovados no CIAAR que já passaram com nossa metodologia comprovada.
+                Junte-se aos 210 aprovados no CIAAR que já passaram com nossa metodologia comprovada.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-2 sm:px-4">
                 {/* Botão principal - Premium */}
