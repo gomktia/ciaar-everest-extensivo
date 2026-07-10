@@ -127,6 +127,39 @@ export default function LandingPage() {
             </div>
           </section>
 
+          {/* Vídeo Demonstrativo das Aulas */}
+          <section className="py-20 bg-black">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  Por que somos o curso
+                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> que mais aprova?</span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Assista ao vídeo e entenda um pouco mais sobre a nossa metodologia
+                </p>
+              </div>
+
+              <div className="relative w-full max-w-4xl mx-auto">
+                {/* Container do vídeo com efeito LED */}
+                <div className="relative overflow-hidden">
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500 via-red-500 to-orange-500  opacity-75 blur-sm"></div>
+                  <YouTubeEmbedOptimized
+                    videoId="T-R-cGtjqrU"
+                    title="Vídeo Demonstrativo - Everest Preparatórios"
+                    className="w-full max-w-4xl mx-auto"
+                  />
+                </div>
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                  <Badge className="bg-orange-500 text-white px-4 py-2">
+                    <Play className="w-4 h-4 mr-2" />
+                    Vídeo Demonstrativo das Aulas
+                  </Badge>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Botões dos Grupos - WhatsApp e Telegram */}
           <section className="py-12 sm:py-16 bg-black relative overflow-hidden">
             {/* Background animado com efeitos LED */}
@@ -470,39 +503,6 @@ export default function LandingPage() {
           </section>
 
 
-
-          {/* Vídeo Demonstrativo das Aulas */}
-          <section className="py-20 bg-black">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  Por que somos o curso
-                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> que mais aprova?</span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Assista ao vídeo e entenda um pouco mais sobre a nossa metodologia
-                </p>
-              </div>
-
-              <div className="relative w-full max-w-4xl mx-auto">
-                {/* Container do vídeo com efeito LED */}
-                <div className="relative overflow-hidden">
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500 via-red-500 to-orange-500  opacity-75 blur-sm"></div>
-                  <YouTubeEmbedOptimized
-                    videoId="T-R-cGtjqrU"
-                    title="Vídeo Demonstrativo - Everest Preparatórios"
-                    className="w-full max-w-4xl mx-auto"
-                  />
-                </div>
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-orange-500 text-white px-4 py-2">
-                    <Play className="w-4 h-4 mr-2" />
-                    Vídeo Demonstrativo das Aulas
-                  </Badge>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* SEÇÃO 3 — Diferencial Competitivo */}
           <section className="py-20 bg-black relative overflow-hidden">
