@@ -585,7 +585,7 @@ export default function LandingPage() {
 
               <div className="text-center mt-12">
                 <p className="text-gray-400 text-sm">
-                  Estes são apenas alguns dos 84 alunos aprovados no CIAAR que usaram nossa metodologia
+                  Estes são apenas alguns dos 210 aprovados no CIAAR que usaram nossa metodologia
                 </p>
               </div>
             </div>
