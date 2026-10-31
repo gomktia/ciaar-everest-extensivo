@@ -15,13 +15,13 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: "Everest Preparatórios - Preparação Completa para CIAAR",
+    default: "Everest Preparatórios - Intensivo EAOF 2027",
     template: "%s | Everest Preparatórios"
   },
-  description: "Plataforma completa de estudos com flashcards avançados, simulados e correção de redações para concursos militares da aeronáutica. +785 flashcards, +84 alunos aprovados e +72 convocados Everest no CIAAR.",
+  description: "Turma Intensiva EAOF 2027: Português, Redação e Regulamentos Comuns para o CIAAR. Aulas gravadas, 3.095 flashcards, 6.213 quizzes, simulados, correção de redações e 11 mentorias ao vivo. 210 alunos aprovados desde 2010.",
   keywords: [
-    "CIAAR", "concurso militar", "aeronáutica", "preparatório",
-    "português", "redação", "flashcards", "simulados", "Professor Tiago Costa",
+    "EAOF", "EAOF 2027", "CIAAR", "concurso militar", "aeronáutica", "preparatório",
+    "português", "redação", "regulamentos militares", "flashcards", "simulados", "Professor Tiago Costa", "Capitão Elói",
     "concurso público", "militar", "preparação", "estudo"
   ],
   authors: [{ name: "Professor Tiago Costa", url: "https://everestpreparatorios.com.br" }],
@@ -37,8 +37,8 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Everest Preparatórios - Preparação Completa para CIAAR",
-    description: "Plataforma completa de estudos com flashcards avançados, simulados e correção de redações para concursos militares da aeronáutica.",
+    title: "Everest Preparatórios - Intensivo EAOF 2027",
+    description: "Turma Intensiva EAOF 2027: Português, Redação e Regulamentos Comuns para o CIAAR, com aulas gravadas, simulados, correção de redações e mentorias ao vivo.",
     url: 'https://ciaar.everestpreparatorios.com.br',
     siteName: 'Everest Preparatórios',
     images: [
@@ -46,7 +46,7 @@ export const metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Everest Preparatórios - Preparação para CIAAR',
+        alt: 'Everest Preparatórios - Intensivo EAOF 2027',
       }
     ],
     locale: 'pt_BR',
@@ -54,8 +54,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Everest Preparatórios - Preparação para CIAAR",
-    description: "Plataforma completa de estudos para concursos militares da aeronáutica.",
+    title: "Everest Preparatórios - Intensivo EAOF 2027",
+    description: "Turma Intensiva EAOF 2027: Português, Redação e Regulamentos Comuns para o CIAAR.",
     images: ['/og-image.jpg'],
   },
   robots: {
