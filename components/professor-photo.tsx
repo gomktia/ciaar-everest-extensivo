@@ -6,9 +6,16 @@ import Image from 'next/image'
 interface ProfessorPhotoProps {
   size?: 'sm' | 'md' | 'lg'
   priority?: boolean
+  src?: string
+  alt?: string
 }
 
-export default function ProfessorPhoto({ size = 'md', priority = true }: ProfessorPhotoProps) {
+export default function ProfessorPhoto({
+  size = 'md',
+  priority = true,
+  src = '/professor-tiago-costa.jpg',
+  alt = 'Professor Tiago Costa - Especialista em Português e Redação para concursos militares'
+}: ProfessorPhotoProps) {
   const sizes = {
     sm: { container: 'w-32 h-32', inset: 'inset-3' },
     md: { container: 'w-48 h-48', inset: 'inset-4' },
@@ -29,8 +36,8 @@ export default function ProfessorPhoto({ size = 'md', priority = true }: Profess
       <div className={`absolute ${currentSize.inset} rounded-full bg-black p-1`}>
         <div className="w-full h-full rounded-full overflow-hidden relative">
           <Image
-            src="/professor-tiago-costa.jpg"
-            alt="Professor Tiago Costa - Especialista em Português e Redação para concursos militares"
+            src={src}
+            alt={alt}
             fill
             className="object-cover"
             priority={priority}

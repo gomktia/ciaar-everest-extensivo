@@ -17,10 +17,41 @@ import { MobileOptimizedImage } from "@/components/mobile-optimized-image";
 import { aprovadosCIAAR, totalAprovadosCIAAR, totalConvocadosCIAAR } from "@/lib/aprovados-ciaar";
 import { useState } from "react";
 
+function FundoSecao({ tom }: { tom: "escuro" | "claro" }) {
+  return (
+    <picture>
+      <source media="(min-width: 768px)" srcSet={`/fundos/${tom}-desktop.webp`} />
+      <img
+        src={`/fundos/${tom}-mobile.webp`}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full !h-full object-cover"
+      />
+    </picture>
+  );
+}
+
+function BotaoCompra({ href, texto }: { href: string; texto: string }) {
+  return (
+    <div className="mt-10 text-center">
+      <a href={href} target="_blank" rel="noopener noreferrer" className="inline-block max-w-full">
+        <Button size="lg" className="h-auto whitespace-normal bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-orange-700 hover:to-red-700 text-white text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 font-extrabold shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 border-2 border-orange-400/30">
+          <Zap className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-yellow-300 flex-shrink-0" />
+          {texto}
+        </Button>
+      </a>
+    </div>
+  );
+}
+
 export default function LandingPage() {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
-  const checkoutUrl = "https://pay.cakto.com.br/mwxrttx_939974";
+  const checkoutUrl = "https://pay.cakto.com.br/g9ith82_1264642";
+  const precoCombo = "R$ 640,00";
+  const precoParcelado = "até 12x de R$ 66,11";
+  const precoPix = "4x via Pix (Pagaleve)";
+  const economia = "R$ 320,00";
 
   return (
     <>
@@ -77,16 +108,9 @@ export default function LandingPage() {
 
           {/* Hero Section */}
           <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
-            {/* Background animado com efeitos LED */}
-            <div className="absolute inset-0 bg-black">
-              {/* Círculos decorativos com efeito LED */}
-              <div className="absolute top-20 left-20 w-48 h-48 md:w-72 md:h-72 bg-gradient-to-r from-blue-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-20 right-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 md:w-80 md:h-80 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
-            </div>
-
-            {/* Grid pattern futurístico */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:50px_50px]"></div>
+            {/* Fundo da página de vendas */}
+            <FundoSecao tom="escuro" />
+            <div className="absolute inset-0 bg-black/70"></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
@@ -100,28 +124,31 @@ export default function LandingPage() {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-white via-orange-100 to-orange-200 bg-clip-text text-transparent leading-tight px-2">
                   Conquiste sua
                   <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent leading-tight">
-                    Vaga no CIAAR
+                    Vaga no EAOF 2027
                   </span>
                 </h1>
-                <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-                  A plataforma mais completa para estudar Português e Redação para o CIAAR 2027.
-                  <span className="text-orange-400 font-semibold"> 196 aulas GRAVADAS, +131 horas, 3.095 flashcards, 6.213 quizzes</span>, simulados, correção de redações e mentorias ao vivo.
+                <p className="mt-4 mb-6 text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide text-white">
+                  TURMA INTENSIVA
+                </p>
+                <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
+                  A plataforma mais completa para estudar Português, Redação e Regulamentos Comuns para o CIAAR 2027.
+                  <span className="text-orange-400 font-semibold"> 142 aulas GRAVADAS (GIT e REDAÇÃO + de 70 horas) + 46 aulas GRAVADAS (Regulamentos Militares + de 33 horas), 3.095 flashcards, 6.213 quizzes</span>, simulados, correção de redações e 11 mentorias ao vivo.
                 </p>
                 <p className="text-base sm:text-lg font-bold text-orange-400 mb-4 px-4">
                   Há 16 anos preparando para o CIAAR
                 </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 lg:space-x-8 text-sm text-gray-400 px-4">
+                <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 lg:space-x-8 text-sm text-gray-200 px-4">
                   <div className="flex items-center">
-                    <Users className="w-5 h-5 text-purple-500 mr-2" />
+                    <Users className="w-5 h-5 text-purple-400 mr-2" />
                     <span>210 alunos aprovados desde 2010</span>
                   </div>
                   <div className="flex items-center">
                     <Award className="w-5 h-5 text-orange-400 mr-2" />
-                    <span>+44 alunos convocados CIAAR / EAOF 2025</span>
+                    <span>+44 alunos convocados EAOF 2025</span>
                   </div>
                   <div className="flex items-center">
                     <Trophy className="w-5 h-5 text-orange-400 mr-2" />
-                    <span>+72 alunos convocados só no último CIAAR / EAOF 2026</span>
+                    <span>+72 alunos convocados só no último concurso EAOF 2026</span>
                   </div>
                 </div>
               </div>
@@ -166,7 +193,7 @@ export default function LandingPage() {
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Pronto para conquistar sua
-                <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> vaga no CIAAR 2027?</span>
+                <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> vaga no EAOF 2027?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Junte-se aos 210 aprovados no CIAAR que já passaram com nossa metodologia comprovada.
@@ -181,8 +208,8 @@ export default function LandingPage() {
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 rounded-2xl opacity-30"></div>
 
                   <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
-                    <Button size="lg" className="relative bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-orange-700 hover:to-red-700 text-white text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 font-bold shadow-2xl group-hover:shadow-orange-500/50 transition-all duration-300 group-hover:scale-105 border-2 border-orange-400/30 hover:border-orange-300/50 w-full sm:w-auto">
-                      <div className="flex items-center justify-center space-x-3">
+                    <Button size="lg" className="relative h-auto bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-orange-700 hover:to-red-700 text-white text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 font-bold shadow-2xl group-hover:shadow-orange-500/50 transition-all duration-300 group-hover:scale-105 border-2 border-orange-400/30 hover:border-orange-300/50 w-full sm:w-auto">
+                      <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
                         <div className="relative">
                           <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300" />
                           {/* Brilho do ícone */}
@@ -190,7 +217,7 @@ export default function LandingPage() {
                         </div>
                         <span className="text-base sm:text-lg font-extrabold">Garantir Minha Vaga</span>
                         <div className="bg-yellow-400 text-orange-900 px-3 py-1 rounded-full text-sm font-bold">
-                          12x de R$ 82,32
+                          {precoParcelado}
                         </div>
                       </div>
                     </Button>
@@ -219,6 +246,7 @@ export default function LandingPage() {
                   </Link>
                 </div>
               </div>
+              <p className="mt-6 text-sm font-semibold text-green-300">7 DIAS DE GARANTIA INCONDICIONAL</p>
             </div>
           </section>
 
@@ -242,58 +270,44 @@ export default function LandingPage() {
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> especial</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Garanta o valor promocional de apenas 12x de R$ 82,32 ou R$ 797,00 à vista.
+                  Garanta o valor promocional de {precoCombo} ou {precoParcelado}.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 px-2">
                 {/* Card Preço Original - Desvalorizado */}
-                <div className="relative group">
+                <div className="relative group md:self-start">
                   {/* Efeito de brilho sutil */}
                   <div className="absolute -inset-1 bg-gradient-to-r from-gray-400 to-gray-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-all duration-500"></div>
 
                   <Card className="relative bg-gradient-to-br from-slate-700/80 to-slate-800/80 border-2 border-gray-500/30 hover:border-gray-400/50 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm">
-                    {/* Badge "Não Recomendado" */}
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-gray-500 text-white px-4 py-1 text-xs font-semibold border border-gray-400/50">
-                        <X className="w-3 h-3 mr-1" />
-                        Não Recomendado
-                      </Badge>
-                    </div>
-
                     <CardHeader className="text-center pt-6">
-                      <CardTitle className="text-2xl text-gray-300">De</CardTitle>
-                      <div className="relative">
-                        <div className="text-5xl font-black text-gray-400 line-through opacity-60">R$ 1.987,00</div>
-                        {/* Símbolo de "não vale a pena" */}
-                        <div className="absolute -top-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                          <X className="w-5 h-5 text-white font-bold" />
-                        </div>
-                      </div>
-                      <CardDescription className="text-gray-400 text-lg">
-                        Preço original
-                      </CardDescription>
+                      <CardTitle className="text-2xl text-gray-300">Cursos Individuais</CardTitle>
                     </CardHeader>
 
                     <CardContent className="pb-6">
-                      <ul className="space-y-3 text-sm text-gray-400 mb-6">
-                        <li className="flex items-center">
-                          <X className="w-5 h-5 text-red-400 mr-3" />
-                          <span>Curso básico</span>
+                      <ul className="space-y-3 text-sm text-gray-300 mb-6">
+                        <li className="flex items-center justify-between gap-3">
+                          <span>Intensivo de Português</span>
+                          <span className="font-semibold whitespace-nowrap">R$ 320,00</span>
                         </li>
-                        <li className="flex items-center">
-                          <X className="w-5 h-5 text-red-400 mr-3" />
-                          <span>Sem bônus</span>
+                        <li className="flex items-center justify-between gap-3">
+                          <span>Intensivo de Redação</span>
+                          <span className="font-semibold whitespace-nowrap">R$ 300,00</span>
                         </li>
-                        <li className="flex items-center">
-                          <X className="w-5 h-5 text-red-400 mr-3" />
-                          <span>Acesso limitado</span>
+                        <li className="flex items-center justify-between gap-3">
+                          <span>Intensivo de Regulamentos</span>
+                          <span className="font-semibold whitespace-nowrap">R$ 340,00</span>
+                        </li>
+                        <li className="flex items-center justify-between gap-3 border-t border-gray-500/40 pt-3 text-lg font-bold text-gray-200">
+                          <span>TOTAL</span>
+                          <span className="whitespace-nowrap line-through opacity-80">R$ 960,00</span>
                         </li>
                       </ul>
 
                       {/* Mensagem de desvalorização */}
                       <div className="text-center p-3 bg-red-500/10 border border-red-500/20 rounded-lg">
-                        <p className="text-red-400 text-sm font-semibold">❌ Não vale a pena!</p>
+                        <p className="text-red-400 text-sm font-semibold">❌ NÃO VALE A PENA</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -317,7 +331,7 @@ export default function LandingPage() {
                         <Badge className="relative bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 text-sm font-bold border-2 border-orange-300/50 shadow-lg whitespace-nowrap">
                           <div className="flex items-center space-x-2">
                             <Gift className="w-4 h-4 text-yellow-300 flex-shrink-0" />
-                            <span>OFERTA LIMITADA - Até 03/08</span>
+                            <span>OFERTA LIMITADA - Até 02/11</span>
                             <div className="w-2 h-2 bg-yellow-300 rounded-full animate-pulse flex-shrink-0"></div>
                           </div>
                         </Badge>
@@ -325,16 +339,17 @@ export default function LandingPage() {
                     </div>
 
                     <CardHeader className="text-center pt-14">
-                      <CardTitle className="text-2xl text-orange-300">Por</CardTitle>
+                      <CardTitle className="text-2xl text-orange-300">COMBO ({precoCombo})</CardTitle>
                       <div className="relative">
                         {/* Preço principal com efeito de brilho */}
                         <div className="text-5xl md:text-6xl font-black bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
-                          12x de R$ 82,32
+                          {precoParcelado}
                         </div>
-                        <p className="mt-2 text-lg font-bold text-green-300">ou R$ 797,00 à vista</p>
+                        <p className="mt-2 text-lg font-bold text-green-300">{precoPix}</p>
+                        <p className="mt-1 text-xs font-bold tracking-wide text-yellow-300">NOVIDADE EVEREST</p>
 
                         {/* Símbolo de "vale muito a pena" */}
-                        <div className="absolute -top-2 -right-2 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                        <div className="absolute -top-11 -right-2 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
                           <Check className="w-6 h-6 text-white font-bold" />
                         </div>
                       </div>
@@ -343,7 +358,7 @@ export default function LandingPage() {
                       {/* Economia destacada */}
                       <div className="mt-3 p-2 bg-green-500/20 border border-green-500/30 rounded-lg">
                         <p className="text-green-400 text-sm font-bold">
-                          💰 ECONOMIA DE R$ 1.190,00 + BÔNUS!
+                          💰 ECONOMIA DE {economia} À VISTA + BÔNUS!
                         </p>
                       </div>
                     </CardHeader>
@@ -352,15 +367,15 @@ export default function LandingPage() {
                       <ul className="space-y-3 text-sm mb-6">
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                          <span className="text-green-300 font-semibold">196 aulas + acervo digital</span>
+                          <span className="text-green-300 font-semibold">+ de 200 aulas + acervo digital</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                          <span className="text-green-300 font-semibold">6 simulados + 6 redações corrigidas</span>
+                          <span className="text-green-300 font-semibold">5 simulados + 5 redações corrigidas</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                          <span className="text-green-300 font-semibold">14 mentorias ao vivo + acesso até 2 dias antes da prova</span>
+                          <span className="text-green-300 font-semibold">11 mentorias ao vivo + acesso até 2 dias antes da prova</span>
                         </li>
                       </ul>
 
@@ -403,29 +418,22 @@ export default function LandingPage() {
               {/* Bônus */}
               <div className="mt-12 text-center">
                 <h3 className="text-2xl font-bold mb-8">
-                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Bônus Exclusivos</span> (Valor: R$ 537,00)
+                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Bônus Exclusivos</span> (Valor: R$ 145,00)
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-2">
-                  <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-lg p-6 border border-orange-500/20">
-                    <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                      <Bookmark className="w-6 h-6 text-white" />
-                    </div>
-                    <h4 className="font-bold mb-2 text-orange-400">INTENSIVO pré-prova CIAAR 2028</h4>
-                    <p className="text-sm text-gray-300">De fevereiro a maio</p>
-                  </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 px-2">
                   <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-lg p-6 border border-orange-500/20">
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
                       <TrendingUp className="w-6 h-6 text-white" />
                     </div>
-                    <h4 className="font-bold mb-2 text-orange-400">2 Simulados Finais</h4>
-                    <p className="text-sm text-gray-300">Simulados completos na reta final da sua preparação</p>
+                    <h4 className="font-bold mb-2 text-orange-400">6 Provas Simuladas</h4>
+                    <p className="text-sm text-gray-300">Português + Regulamentos + Redação</p>
                   </div>
                   <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-lg p-6 border border-orange-500/20">
-                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                      <Calendar className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                      <Video className="w-6 h-6 text-white" />
                     </div>
-                    <h4 className="font-bold mb-2 text-orange-400">Cronograma Personalizado</h4>
-                    <p className="text-sm text-gray-300">Plano de estudos adaptado ao seu tempo</p>
+                    <h4 className="font-bold mb-2 text-orange-400">Aulão Final</h4>
+                    <p className="text-sm text-gray-300">Português + Regulamentos + Redação</p>
                   </div>
                 </div>
               </div>
@@ -538,37 +546,34 @@ export default function LandingPage() {
                   </p>
                 </div>
               </div>
+
+              <BotaoCompra href={checkoutUrl} texto="QUERO SER O PRÓXIMO APROVADO NO EAOF" />
             </div>
           </section>
 
           {/* SEÇÃO 3 — Diferencial Competitivo */}
           <section className="py-20 bg-black relative overflow-hidden">
-            {/* Background animado com efeitos LED */}
-            <div className="absolute inset-0 bg-black">
-              <div className="absolute top-20 left-20 w-48 h-48 md:w-72 md:h-72 bg-gradient-to-r from-blue-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-20 right-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            </div>
-
-            {/* Grid pattern futurístico */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:50px_50px]"></div>
+            {/* Fundo claro da página de vendas */}
+            <FundoSecao tom="claro" />
+            <div className="absolute inset-0 bg-white/40"></div>
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
                   Por que o Everest é
-                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> diferente de qualquer outro cursinho?</span>
+                  <span className="text-orange-700"> diferente de qualquer outro cursinho?</span>
                 </h2>
               </div>
 
-              <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+              <div className="space-y-6 text-lg text-slate-900 font-medium leading-relaxed">
                 <p>
                   A maioria dos cursinhos funciona assim: aula ao vivo em data marcada, você assiste no horário, e se perder, espera o vídeo ficar disponível. Você fica refém do calendário deles.
                 </p>
                 <p>
-                  No Everest, a gente inverteu a lógica: <span className="text-orange-400 font-semibold">todas as aulas já estão gravadas</span>. Você investe no curso e começa a assistir na mesma hora. 196 aulas gravadas, mais de 131 horas de conteúdo de Gramática e Redação, do básico ao avançado — disponíveis agora, não quando o cronograma deixar.
+                  No Everest, a gente inverteu a lógica: <span className="text-orange-700 font-bold">todas as aulas já estão gravadas</span>. Você investe no curso e começa a assistir na mesma hora. + de 200 aulas gravadas, quase 200 horas de conteúdo de Gramática, Redação e Regulamentos, da teoria à prática — DISPONÍVEIS AGORA, não quando o cronograma deixar.
                 </p>
                 <p>
-                  E as <span className="text-orange-400 font-semibold">14 mentorias ao vivo</span>? Essas são um dos nossos diferenciais: encontros periódicos que NÃO são aulas, são mentorias para você aprender estratégias de resolução de questões que caíram em prova, tirar dúvidas em tempo real, e receber complementações das aulas gravadas de forma personalizada.
+                  E as <span className="text-orange-700 font-bold">11 mentorias ao vivo</span>? Essas são um dos nossos diferenciais: encontros periódicos que NÃO são aulas, são mentorias para você aprender estratégias de resolução de questões que caíram em prova, tirar dúvidas em tempo real, e receber complementações das aulas gravadas de forma personalizada.
                 </p>
               </div>
 
@@ -577,6 +582,8 @@ export default function LandingPage() {
                   É o melhor dos dois mundos: a <span className="text-orange-400">flexibilidade do curso gravado</span> com o <span className="text-orange-400">suporte do ao vivo</span>.
                 </p>
               </div>
+
+              <BotaoCompra href={checkoutUrl} texto="QUERO TER ACESSO IMEDIATO AO CURSO" />
             </div>
           </section>
 
@@ -648,7 +655,7 @@ export default function LandingPage() {
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> passar no CIAAR</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Nossa plataforma foi desenvolvida especificamente para o concurso da FAB,
+                  Nossa plataforma foi desenvolvida especificamente para o concurso CIAAR da FAB,
                   com conteúdo 100% alinhado ao edital e metodologia comprovada.
                 </p>
               </div>
@@ -869,7 +876,7 @@ export default function LandingPage() {
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> incluído</span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Semi Extensivo CIAAR 2027 com acesso até 2 dias antes da prova. Tudo que você precisa para passar no CIAAR.
+                  INTENSIVO EAOF 2027 com acesso até 2 dias antes da prova. Tudo que você precisa para passar no CIAAR.
                 </p>
               </div>
 
@@ -882,9 +889,9 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                         <Video className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">196 Aulas Gravadas</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">+ de 200 Aulas Gravadas</CardTitle>
                       <CardDescription className="text-gray-300">
-                        +131 horas de aulas de GIT em 9 frentes, com visualização off-line
+                        quase 200 horas de aulas em 3 cursos em um só, com visualização off-line
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow flex flex-col justify-end">
@@ -896,6 +903,10 @@ export default function LandingPage() {
                         <li className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                           Redação (teoria e prática)
+                        </li>
+                        <li className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          Regulamentos (teoria e prática)
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -946,9 +957,9 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                         <Target className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">6 Simulados</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">5 Simulados (port+reg+red)</CardTitle>
                       <CardDescription className="text-gray-300">
-                        6 provas simuladas com 6 temas de redação
+                        5 provas simuladas com 5 temas de redação
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow flex flex-col justify-end">
@@ -978,9 +989,9 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-4">
                         <Headphones className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">14 Mentorias ao Vivo</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">11 Mentorias ao Vivo</CardTitle>
                       <CardDescription className="text-gray-300">
-                        Mentorias ao vivo para dúvidas e prática de questões - início em abril
+                        Mentorias ao vivo para dúvidas e prática de questões - início em dezembro
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow flex flex-col justify-end">
@@ -1042,7 +1053,7 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                         <Award className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">6 Redações Corrigidas</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">5 Redações Corrigidas</CardTitle>
                       <CardDescription className="text-gray-300">
                         Correção detalhada com laudo avaliativo e auxílio de IA
                       </CardDescription>
@@ -1119,62 +1130,6 @@ export default function LandingPage() {
                     Você não descobre apenas sua nota. Você descobre onde errou, por que errou e exatamente o que fazer para não errar de novo.
                   </p>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          {/* SEÇÃO 6 — Bônus: Intensivo CIAAR */}
-          <section className="py-20 bg-black relative overflow-hidden">
-            {/* Background animado com efeitos LED */}
-            <div className="absolute inset-0 bg-black">
-              <div className="absolute top-20 left-20 w-48 h-48 md:w-72 md:h-72 bg-gradient-to-r from-green-500/25 to-emerald-500/25 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-20 right-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-blue-500/25 to-cyan-500/25 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            </div>
-
-            {/* Grid pattern futurístico */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:50px_50px]"></div>
-
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-              <div className="text-center mb-10">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                  🔥 Bônus Exclusivo para Alunos Civis:
-                  <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Intensivo CIAAR Incluso</span>
-                </h2>
-              </div>
-
-              <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-2xl p-6 sm:p-8 border border-orange-500/20">
-                <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-                  <p>
-                    Se você é civil e está de olho no concurso CIAAR, aqui vai o que faz o Semi-Extensivo valer ainda mais a pena:
-                  </p>
-                  <p>
-                    Quem adquire o Semi-Extensivo leva de bônus o curso <span className="text-orange-400 font-semibold">Intensivo CIAAR</span>, que começa logo após a prova do EAOF.
-                  </p>
-                  <p>
-                    Isso significa que você continua se preparando para o concurso CIAAR civis (prova em junho):
-                  </p>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6 my-8">
-                  <div className="bg-black/30 rounded-xl p-6 border border-orange-500/20">
-                    <div className="flex items-center mb-3">
-                      <div className="w-9 h-9 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">1</div>
-                      <span className="font-bold text-orange-400">Primeiro</span>
-                    </div>
-                    <p className="text-gray-300">Foco total no EAOF (prova em fevereiro) com o conteúdo completo do Semi-Extensivo.</p>
-                  </div>
-                  <div className="bg-black/30 rounded-xl p-6 border border-orange-500/20">
-                    <div className="flex items-center mb-3">
-                      <div className="w-9 h-9 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">2</div>
-                      <span className="font-bold text-orange-400">Depois</span>
-                    </div>
-                    <p className="text-gray-300">Migração automática para o Intensivo CIAAR, com conteúdo direcionado para a prova de junho.</p>
-                  </div>
-                </div>
-
-                <p className="text-center text-xl md:text-2xl font-bold text-orange-400">
-                  Duas preparações, um investimento.
-                </p>
               </div>
             </div>
           </section>
@@ -1286,6 +1241,26 @@ export default function LandingPage() {
             </div>
           </section>
 
+          {/* Professor Rui Elói Section */}
+          <section className="py-20 bg-black relative overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  Conheça o
+                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> Professor Elói</span>
+                </h2>
+              </div>
+
+              <div className="max-w-3xl mx-auto text-center md:text-left">
+                <ProfessorPhoto src="/capitao-eloi.jpg" alt="Professor Rui Elói de Campos, Capitão R1 da Força Aérea Brasileira" priority={false} />
+                <h3 className="text-2xl font-bold mb-4 text-orange-400">Rui Elói de Campos</h3>
+                <p className="text-base text-gray-300 leading-relaxed text-justify">
+                  O professor Elói é Capitão R1 da Força Aérea Brasileira — oriundo do EAOF. Foi 1º colocado do CAS/2003; 1º colocado do concurso e do EAOF 2004, é Advogado (OAB/RS nº 131.424), com atuação especialmente em Direito Militar. Permaneceu por mais de 10 anos atuando na Seção de Investigação e Justiça (SIJ) e Assessoria Jurídica (AJUR) da BASM, encerrando suas atividades em 2025 como Assessor de Apoio Jurídico da Guarnição de Aeronáutica de Santa Maria (AAJ). Atuou ainda como professor de Direito Militar na Faculdade Palotina - FAPAS em Santa Maria/RS.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* SEÇÃO 9 — FAQ */}
           <section className="py-20 bg-black relative overflow-hidden">
             {/* Background animado com efeitos LED */}
@@ -1307,12 +1282,12 @@ export default function LandingPage() {
               <div className="space-y-4">
                 {[
                   {
-                    q: "1. Como funciona o Semi-Extensivo CIAAR?",
-                    a: "É um curso de preparação focado em Português (GIT) e Redação para o concurso CIAAR. Você recebe acesso imediato a todas as aulas gravadas, flashcards, questões, simulados, correção de redação com IA e 14 mentorias ao vivo.",
+                    q: "1. Como funciona o INTENSIVO EAOF 2027?",
+                    a: "É um curso de preparação focado em Português, Regulamentos e Redação para o concurso CIAAR. Você recebe acesso imediato a todas as aulas gravadas, flashcards, questões, simulados, correção de redação com IA e 11 mentorias ao vivo.",
                   },
                   {
-                    q: "2. Qual a diferença entre o Semi-Extensivo e o Extensivo EAOF?",
-                    a: "O Semi-Extensivo tem carga horária mais enxuta e valor mais acessível. É ideal para quem quer o melhor custo-benefício. O Extensivo é o pacote completo com maior número de aulas e recursos. Ambos usam a mesma metodologia.",
+                    q: "2. Qual a diferença entre o INTENSIVO, o Semi-Extensivo e o Extensivo EAOF?",
+                    a: "O INTENSIVO é o projeto com a presença da inclusão dos Regulamentos Militares e menos encontros ao vivo e correções de redação.",
                   },
                   {
                     q: "3. Quando começa o curso? Posso começar agora?",
@@ -1320,7 +1295,7 @@ export default function LandingPage() {
                   },
                   {
                     q: "4. Sou civil, esse curso serve para mim?",
-                    a: "Sim. O Semi-Extensivo cobre Português e Redação, que são as matérias que mais derrubam candidatos civis e militares. E como bônus, você leva o Intensivo CIAAR após a prova do EAOF — preparação específica para o concurso civil.",
+                    a: "Sim. O INTENSIVO cobre Português e Redação, que são as matérias que mais derrubam candidatos civis e militares, além de Regulamentos.",
                   },
                   {
                     q: "5. Como funciona a correção de redação?",
@@ -1332,7 +1307,7 @@ export default function LandingPage() {
                   },
                   {
                     q: "7. Até quando o valor especial está disponível?",
-                    a: "O valor de pré-lançamento é válido até o dia 3 de agosto de 2026, data da live inaugural do Semi-Extensivo. Após essa data, o preço será reajustado.",
+                    a: "O valor de pré-lançamento é válido até o dia 2 de novembro de 2026, data da live inaugural do Semi-Extensivo. Após essa data, o preço será reajustado.",
                   },
                 ].map((item, i) => (
                   <details
@@ -1354,23 +1329,16 @@ export default function LandingPage() {
 
           {/* CTA Final */}
           <section className="py-20 bg-black relative overflow-hidden">
-            {/* Background animado com efeitos LED */}
-            <div className="absolute inset-0 bg-black">
-              {/* Círculos decorativos com efeito LED */}
-              <div className="absolute top-20 left-20 w-48 h-48 md:w-72 md:h-72 bg-gradient-to-r from-blue-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-20 right-20 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 md:w-80 md:h-80 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
-            </div>
-
-            {/* Grid pattern futurístico */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:50px_50px]"></div>
+            {/* Fundo da página de vendas */}
+            <FundoSecao tom="escuro" />
+            <div className="absolute inset-0 bg-black/70"></div>
 
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Pronto para conquistar sua
-                <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> vaga no CIAAR 2027?</span>
+                <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent"> vaga no EAOF 2027?</span>
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-200 mb-8">
                 Junte-se aos 210 aprovados no CIAAR que já passaram com nossa metodologia comprovada.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-2 sm:px-4">
@@ -1383,8 +1351,8 @@ export default function LandingPage() {
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 rounded-2xl  opacity-75"></div>
 
                   <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
-                    <Button size="lg" className="relative bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-orange-700 hover:to-red-700 text-white text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 font-bold shadow-2xl group-hover:shadow-orange-500/50 transition-all duration-300 group-hover:scale-105 border-2 border-orange-400/30 hover:border-orange-300/50 w-full sm:w-auto">
-                      <div className="flex items-center justify-center space-x-3">
+                    <Button size="lg" className="relative h-auto bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-orange-700 hover:to-red-700 text-white text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 font-bold shadow-2xl group-hover:shadow-orange-500/50 transition-all duration-300 group-hover:scale-105 border-2 border-orange-400/30 hover:border-orange-300/50 w-full sm:w-auto">
+                      <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
                         <div className="relative">
                           <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300" />
                           {/* Brilho do ícone */}
@@ -1392,7 +1360,7 @@ export default function LandingPage() {
                         </div>
                         <span className="text-base sm:text-lg font-extrabold">Garantir Minha Vaga</span>
                         <div className="bg-yellow-400 text-orange-900 px-3 py-1 rounded-full text-sm font-bold">
-                          12x de R$ 82,32
+                          {precoParcelado}
                         </div>
                       </div>
                     </Button>
@@ -1421,6 +1389,7 @@ export default function LandingPage() {
                   </Link>
                 </div>
               </div>
+              <p className="mt-6 text-sm font-semibold text-green-300">7 DIAS DE GARANTIA INCONDICIONAL</p>
             </div>
           </section>
 
@@ -1524,7 +1493,7 @@ export default function LandingPage() {
 
                         <h3 className="text-2xl font-bold mb-2 text-orange-400">Turma de Degustação</h3>
                         <p className="text-gray-300 mb-4">
-                          Semi Extensivo CIAAR 2027<br />
+                          INTENSIVO EAOF 2027<br />
                           <span className="text-sm text-orange-300/80">Experimente a plataforma gratuitamente</span>
                         </p>
 
