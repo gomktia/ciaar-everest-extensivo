@@ -331,7 +331,7 @@ export default function LandingPage() {
                         <Badge className="relative bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 text-sm font-bold border-2 border-orange-300/50 shadow-lg whitespace-nowrap">
                           <div className="flex items-center space-x-2">
                             <Gift className="w-4 h-4 text-yellow-300 flex-shrink-0" />
-                            <span>OFERTA LIMITADA - Até 02/11</span>
+                            <span>OFERTA LIMITADA - Até 02/12</span>
                             <div className="w-2 h-2 bg-yellow-300 rounded-full animate-pulse flex-shrink-0"></div>
                           </div>
                         </Badge>
@@ -1307,7 +1307,7 @@ export default function LandingPage() {
                   },
                   {
                     q: "7. Até quando o valor especial está disponível?",
-                    a: "O valor de pré-lançamento é válido até o dia 2 de novembro de 2026, data da live inaugural do Semi-Extensivo. Após essa data, o preço será reajustado.",
+                    a: "O valor de pré-lançamento é válido até o dia 2 de dezembro de 2026, data da live inaugural do Semi-Extensivo. Após essa data, o preço será reajustado.",
                   },
                 ].map((item, i) => (
                   <details
