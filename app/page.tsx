@@ -14,7 +14,8 @@ import { YouTubeEmbedOptimized } from "@/components/youtube-embed-optimized";
 import { OptimizedVideo } from "@/components/optimized-video";
 import { MobileVideoStrategy } from "@/components/mobile-video-strategy";
 import { MobileOptimizedImage } from "@/components/mobile-optimized-image";
-import { aprovadosCIAAR, totalAprovadosCIAAR, totalConvocadosCIAAR } from "@/lib/aprovados-ciaar";
+import { aprovadosCIAAR, totalAprovadosCIAAR } from "@/lib/aprovados-ciaar";
+import { DegustacaoLeadForm } from "@/components/degustacao-lead-form";
 import { useState } from "react";
 
 function FundoSecao({ tom }: { tom: "escuro" | "claro" }) {
@@ -132,7 +133,7 @@ export default function LandingPage() {
                 </p>
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
                   A plataforma mais completa para estudar Português, Redação e Regulamentos Comuns para o CIAAR 2027.
-                  <span className="text-orange-400 font-semibold"> 142 aulas GRAVADAS (GIT e REDAÇÃO + de 70 horas) + 46 aulas GRAVADAS (Regulamentos Militares + de 33 horas), 3.095 flashcards, 6.213 quizzes</span>, simulados, correção de redações e 11 mentorias ao vivo.
+                  <span className="text-orange-400 font-semibold"> + de 200 aulas GRAVADAS (quase 200 horas de Gramática, Redação e Regulamentos), 3.095 flashcards, 6.213 quizzes</span>, simulados, correção de redações e 11 mentorias ao vivo.
                 </p>
                 <p className="text-base sm:text-lg font-bold text-orange-400 mb-4 px-4">
                   Há 16 anos preparando para o CIAAR
@@ -173,7 +174,7 @@ export default function LandingPage() {
                 <div className="relative overflow-hidden">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500 via-red-500 to-orange-500  opacity-75 blur-sm"></div>
                   <YouTubeEmbedOptimized
-                    videoId="T-R-cGtjqrU"
+                    videoId="Hqo9-J0s3pQ"
                     title="Vídeo Demonstrativo - Everest Preparatórios"
                     className="w-full max-w-4xl mx-auto"
                   />
@@ -371,7 +372,7 @@ export default function LandingPage() {
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                          <span className="text-green-300 font-semibold">5 simulados + 5 redações corrigidas</span>
+                          <span className="text-green-300 font-semibold">4 simulados + 4 redações corrigidas</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -425,7 +426,7 @@ export default function LandingPage() {
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
                       <TrendingUp className="w-6 h-6 text-white" />
                     </div>
-                    <h4 className="font-bold mb-2 text-orange-400">6 Provas Simuladas</h4>
+                    <h4 className="font-bold mb-2 text-orange-400">4 Provas Simuladas</h4>
                     <p className="text-sm text-gray-300">Português + Regulamentos + Redação</p>
                   </div>
                   <div className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-lg p-6 border border-orange-500/20">
@@ -533,16 +534,13 @@ export default function LandingPage() {
                   <Trophy className="w-6 h-6 mr-3" />
                   Total: {totalAprovadosCIAAR} Alunos na Lista — EAOF / CIAAR 2026
                 </div>
-                <p className="mt-4 text-sm text-gray-400">
-                  {totalConvocadosCIAAR} convocados e {totalAprovadosCIAAR - totalConvocadosCIAAR} aprovados, classificados por média final
-                </p>
               </div>
 
               {/* Texto completo sobre os aprovados */}
               <div className="mt-16 text-center">
                 <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-2xl p-8 border border-orange-500/20">
                   <p className="text-lg md:text-xl text-gray-200 leading-relaxed italic">
-                    “Em 15 anos de mercado, o Everest se consolidou como o preparatório com o maior número de aprovados para o EAOF. Não é sorte — é método, plataforma própria e preparação que funciona.”
+                    “Em 16 anos de mercado, o Everest se consolidou como o preparatório com o maior número de aprovados para o EAOF. Não é sorte — é método, plataforma própria e preparação que funciona.”
                   </p>
                 </div>
               </div>
@@ -957,9 +955,9 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                         <Target className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">5 Simulados (port+reg+red)</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">4 Simulados (port+reg+red)</CardTitle>
                       <CardDescription className="text-gray-300">
-                        5 provas simuladas com 5 temas de redação
+                        4 provas simuladas com 4 temas de redação
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow flex flex-col justify-end">
@@ -974,7 +972,7 @@ export default function LandingPage() {
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          10 temas de redação
+                          4 temas de redação
                         </li>
                       </ul>
                     </CardContent>
@@ -1053,7 +1051,7 @@ export default function LandingPage() {
                       <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                         <Award className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-orange-400">5 Redações Corrigidas</CardTitle>
+                      <CardTitle className="text-xl text-orange-400">4 Redações Corrigidas</CardTitle>
                       <CardDescription className="text-gray-300">
                         Correção detalhada com laudo avaliativo e auxílio de IA
                       </CardDescription>
@@ -1307,7 +1305,7 @@ export default function LandingPage() {
                   },
                   {
                     q: "7. Até quando o valor especial está disponível?",
-                    a: "O valor de pré-lançamento é válido até o dia 2 de dezembro de 2026, data da live inaugural do Semi-Extensivo. Após essa data, o preço será reajustado.",
+                    a: "O valor de pré-lançamento é válido até o dia 2 de dezembro de 2026, data da live inaugural do Intensivo. Após essa data, o preço será reajustado.",
                   },
                 ].map((item, i) => (
                   <details
@@ -1468,58 +1466,8 @@ export default function LandingPage() {
                   </a>
                 </div>
 
-                {/* Botão Degustação CIAAR 2027 */}
-                <div className="relative group overflow-hidden">
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-400 via-amber-500 to-orange-500 opacity-30 blur-sm"></div>
-                  <a
-                    href="https://app.everestpreparatorios.com.br/invite/degustacao-eaof-2027"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative block"
-                  >
-                    <div className="relative bg-gradient-to-br from-[#1e293b] to-[#334155] border-2 border-orange-500/40 rounded-2xl p-6 sm:p-8 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-orange-500/25 h-full m-1">
-                      <div className="text-center">
-                        {/* Badge Grátis */}
-                        <div className="absolute -top-3 right-4 sm:right-6">
-                          <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
-                            GRÁTIS
-                          </span>
-                        </div>
-
-                        {/* Ícone Plataforma */}
-                        <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                          <Play className="w-12 h-12 text-white ml-1" />
-                        </div>
-
-                        <h3 className="text-2xl font-bold mb-2 text-orange-400">Turma de Degustação</h3>
-                        <p className="text-gray-300 mb-4">
-                          INTENSIVO EAOF 2027<br />
-                          <span className="text-sm text-orange-300/80">Experimente a plataforma gratuitamente</span>
-                        </p>
-
-                        <div className="space-y-2 text-sm text-gray-300 mb-6">
-                          <div className="flex items-center justify-center">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                            <span>Acesso a aulas demonstrativas</span>
-                          </div>
-                          <div className="flex items-center justify-center">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                            <span>Conheça a plataforma por dentro</span>
-                          </div>
-                          <div className="flex items-center justify-center">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                            <span>Sem compromisso</span>
-                          </div>
-                        </div>
-
-                        <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-full font-semibold group-hover:from-orange-600 group-hover:to-orange-700 transition-all duration-300 inline-flex items-center">
-                          <Users className="w-5 h-5 mr-2" />
-                          Experimentar Grátis
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                {/* Formulário Interativo de Degustação / Captura de Lead */}
+                <DegustacaoLeadForm />
               </div>
 
               {/* Badge adicional */}
