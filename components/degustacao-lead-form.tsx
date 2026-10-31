@@ -77,13 +77,30 @@ export function DegustacaoLeadForm() {
     };
 
     try {
-      await fetch("/api/lead", {
+      let res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+
+      // Se estiver na Vercel (ex: ciaar.everestpreparatorios.com.br) onde o Cloudflare Functions não roda localmente, usa o endpoint ativo
+      if (!res.ok) {
+        res = await fetch("https://eaof.everestpreparatorios.com.br/api/lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      }
     } catch (err) {
-      console.warn("Falha ao registrar lead no endpoint local:", err);
+      try {
+        await fetch("https://eaof.everestpreparatorios.com.br/api/lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      } catch (e) {
+        console.warn("Falha ao registrar lead:", e);
+      }
     } finally {
       setLoading(false);
       setSubmitted(true);
@@ -245,3 +262,4 @@ export function DegustacaoLeadForm() {
     </div>
   );
 }
+
